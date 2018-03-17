@@ -5,36 +5,38 @@
 @import "sass/utilities/functions"
 
 //------------------ Example: ------------------
-
-// 2. Set your own initial variables
-// Update blue
-$blue: #72d0eb
-// Add pink and its invert
-$pink: #ffb3b3
-$pink-invert: #fff
-// Add a serif family
-$family-serif: "Merriweather", "Georgia", serif
-
-// 3. Set the derived variables
-// Use the new pink as the primary color
-$primary: $pink
-$primary-invert: $pink-invert
-// Use the existing orange as the danger color
-$danger: $orange
-// Use the new serif family
-$family-primary: $family-serif
-
 // 4. Setup your Custom Colors
+/*------------------- My color pallete --------------*/
+/* Made with https://color.adobe.com/ */
+$attention: #E83D57
+$attention-invert: findColorInvert($attention)
+
+$interesting: #FFEEBF
+$interesting-invert: findColorInvert($interesting)
+
+$playful: #8EE895
+$playful-invert: findColorInvert($playful)
+
+$deep: #1A67FF
+$deep-invert: findColorInvert($deep)
+
+//Monotone
+$brown-primary: #E8AE3D
+$pale: #FFEEBF
+$brownish: #E8D68E
+$gold: #F7DE2D
+
+//media
 $linkedin: #0077b5
 $linkedin-invert: findColorInvert($linkedin)
-$twitter: #55acee
-$twitter-invert: findColorInvert($twitter)
+// $twitter: #55acee
+// $twitter-invert: findColorInvert($twitter)
 $github: #333
 $github-invert: findColorInvert($github)
-
+/*---------------------------------------------------*/
 // 5. Add new color variables to the color map.
 @import "sass/utilities/derived-variables.sass"
-$addColors: ("twitter":($twitter, $twitter-invert), "linkedin": ($linkedin, $linkedin-invert), "github": ($github, $github-invert))
+$addColors: ("linkedin": ($linkedin, $linkedin-invert), "github": ($github, $github-invert), "attention": ($attention, $attention-invert), "interesting": ($interesting, $interesting-invert), "playful": ($playful, $playful-invert), "deep": ($deep, $deep-invert))
 $colors: map-merge($colors, $addColors)
 
 // 6. Import the rest of Bulma
@@ -46,28 +48,115 @@ $colors: map-merge($colors, $addColors)
 @import "sass/components/_all"
 @import "sass/grid/_all"
 @import "sass/layout/_all"
+/*------------------- Main --------------------------*/
+header
+	background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424)
+	background-color: #131313 !important
+	background-size: 20px 20px
+	.hero-body
+		text-align: center
+		.profile
+			margin: auto
+			margin-bottom: 10px
+			background-color: whitesmoke
+			width: 400px
+			height: 300px
+			// background-image: url('../images/andres.png')
+			border-radius: 35%
+		.social-media
+			margin: auto
+			.media-item
+				margin: 0 15px
+				display: inline-block
+				&:last-child
+					color: $linkedin-invert
+					.icon
+						border-radius: 15%
+						background-color: $linkedin
+
+.gold-top
+	border-top: 15px solid $gold
+	hr
+		border: 2px solid $brown-primary
+		margin: 0 20%
+
+.tools
+	.level, .is-multiline
+		margin-bottom: 0 !important
+	.column
+		margin-bottom: 10px
+
+article > .level
+	display: block
+	.tool-header
+		background-size: cover
+		background-position: center
+		height: 200px
+		transition: filter 0.6s
+	a
+		font-weight: 900
+		position: relative
+		bottom: 110px
+		opacity: 0
+		transition: opacity 0.6s
+	&:hover > .tool-header
+		filter: blur(4px) grayscale(50%)
+	&:hover > a
+		opacity: 1
+	
+.tool-body
+	box-shadow: inset 0px 3px 10px -4px #888
+	padding: 15px
+	margin-top: -24px
+	background-color: whitesmoke
+	color: $body-color
+
+article.is-full
+	.tool-header
+		height: 300px
+	a
+		font-size: 2rem
+		bottom: 178px
+	.tool-body
+		margin-top: -48px
+.projects
+	.project-image
+		min-height: 400px
+		background-size: cover
+		background-position: top center
+		border-radius: 5%
+
+.interesting-top
+	border-top: 15px solid $interesting
+
+/*------------------- Style Misc --------------------*/
+.content blockquote footer
+	font-weight: 300
+
+.shadow
+	box-shadow: 0 3px 16px #888
 
 /*------------------- Misc --------------------------*/
 .no-padding-top
-	padding-top: 0
+	padding-top: 0 !important
 
 .no-padding-right
-	padding-right: 0
+	padding-right: 0 !important
 
 .no-padding-bottom
-	padding-bottom: 0
+	padding-bottom: 0 !important
 
 .no-padding-left
-	padding-left: 0
+	padding-left: 0 !important
 
 .no-margin-top
-	margin-top: 0
+	margin-top: 0 !important
 
 .no-margin-right
-	margin-right: 0
+	margin-right: 0 !important
 
 .no-margin-bottom
-	margin-bottom: 0
+	margin-bottom: 0 !important
 
 .no-margin-left
-	margin-left: 0
+	margin-left: 0 !important

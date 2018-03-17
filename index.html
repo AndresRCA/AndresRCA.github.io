@@ -3,34 +3,132 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bulma environment</title>
+	<title>Andres Castillo</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/bulma.css">
 </head>
 <body>
-	<header class="hero is-primary">
+	<header class="hero is-header is-dark shadow"><!-- shadow is doing something weird, add style instead -->
 		<div class="hero-body">
-			<h1 class="title">Title</h1>
-			<h2 class="subtitle">Subtitle</h2>
-		</div>
-	</header>
-	<nav class="navbar">
-		<div class="navbar-brand">
-			<span class="navbar-item">Brand</span>
-			<span class="navbar-burger">
-				<span></span>
-				<span></span>
-				<span></span>
-			</span>
-		</div>
-		<div class="navbar-menu">
-			<div class="navbar-start">
-				<a href="#" class="navbar-item">item1</a>
-				<a href="#" class="navbar-item">item2</a>
+			<div class="profile"></div>
+			<h1 class="title">Andres Castillo</h1>
+			<h2 class="subtitle">Full stack developper in training</h2>
+			<div class="social-media">
+				<a href="#" class="media-item">
+					<span class="icon"><i class="fa fa-github"></i></span>
+				</a>
+				<a href="#" class="media-item">
+					<b>Linked</b>&nbsp;<span class="icon"><i class="fa fa-linkedin"></i></span>
+				</a>
 			</div>
 		</div>
-	</nav>
+	</header>
 	<main>
-		
+		<section class="section">
+			<div class="container has-text-centered content">
+				<h1>Who am I?</h1>
+				<p>
+					My name is Andres Castillo and I'm a student of telecomunications engineering, aside from that I'm also an avid learner of web development and the various aspects of it, if you ask me to make a website I will do my best to think about every single small detail concerning the design and use at the same time the best tool needed to provide dinamic webpages.
+				</p>
+			</div>
+		</section>
+		<div class="hero is-dark is-bold gold-top shadow">
+			<div class="container">
+				<div class="hero-head has-text-centered">
+					<h2 class="title" style="margin-top: 40px">What tools do I use?</h2>
+					<hr>
+				</div>
+				<div class="hero-body tools">
+					<h3 class="subtitle is-4 has-text-centered-mobile">Front end tools</h3>
+					<div class="columns is-multiline">
+						<article class="column is-4">
+							<div class="level">
+								<div class="tool-header" style="background-image: url('./images/VueJs.jpeg');"></div>
+								<a href="https://vuejs.org/" class="level-item">Find out more!</a>
+							</div>
+							<div class="tool-body">
+								<p class="content">Vue.js is a great tool. It allows me to do many great things.</p>
+							</div>
+						</article>
+						<article class="column is-4">
+							<div class="level">
+								<div class="tool-header" style="background-image: url('./images/bulmaCSS.png');"></div>
+								<a href="https://bulma.io/" class="level-item" style="color: #333">Find out more!</a>
+							</div>
+							<div class="tool-body">
+								<p class="content">Bulma is a wonderful css framework, I'm actually using it right now!</p>
+							</div>
+						</article>
+						<article class="column is-4">
+							<div class="level">
+								<div class="tool-header" style="background-image: url('./images/Bootstrap.png');"></div>
+								<a href="https://getbootstrap.com/" class="level-item">Find out more!</a>
+							</div>
+							<div class="tool-body">
+								<p class="content">
+									Bootstrap is the first CSS framework I learned, it's a very powerful tool for styling webpages but it also comes with some inconveniences (elaborate further).
+								</p>
+							</div>
+						</article>
+						<article class="column is-4">
+							<div class="level">
+								<div class="tool-header" style="background-image: url('./images/Axios.png');"></div>
+								<a href="https://github.com/axios/axios" class="level-item" style="color: #333">Find out more!</a>
+							</div>
+							<div class="tool-body">
+								<p class="content">Axios is a simple library that helps me with http requests.</p>
+							</div>
+						</article>
+						<article class="column is-4">
+							<div class="level">
+								<div class="tool-header" style="background-image: url('./images/jQuery.jpg');"></div>
+								<a href="https://jquery.com/" class="level-item">Find out more!</a>
+							</div>
+							<div class="tool-body">
+								<p class="content">
+									Everybodys knows jQuery, it's that library everyone wants to get rid off but somehow need it for something such as a particular animation that occurs only when certain conditions are met, and for some people its ajax function.
+								</p>
+							</div>
+						</article>
+					</div>
+					<h3 class="subtitle is-4 has-text-centered-mobile">Back end tools</h3>
+					<article class="is-full">
+						<div class="level">
+							<div class="tool-header" style="background-image: url('./images/laravel-banner.jpg');"></div>
+							<a href="https://laravel.com/" class="level-item">Find out more!</a>
+						</div>
+						<div class="tool-body">
+							<p class="content">
+								Laravel is a PHP framework that handles the various aspects of backend programming, such as routing, controllers, database access and much more.
+							</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+		<section class="section">
+			<div class="container content">
+				<h1>Wanna check out my work?</h1>
+				<p>
+					I believe that bigger projects lead to better results, of course development time gets longer but the end product will always be amazing, as <b>Shigeru Miyamoto</b> once said:
+				</p>
+				<blockquote>
+					“A delayed game is eventually good, a bad game is bad forever.”
+					<footer>- Shigeru Miyamoto</footer>
+				</blockquote>
+			</div>
+		</section>
+		<div class="hero is-dark is-medium interesting-top projects">
+			<div class="hero-body">
+				<div class="columns">
+					<div class="column is-5">
+						<h1 class="title is-2">Check out this all around website</h1>
+						<h2 class="subtitle is-3">It's very nice</h2>
+					</div>
+					<div class="column is-7 project-image" style="background-image: url('./images/Vue-project.png');"></div>
+				</div>
+			</div>
+		</div>
 	</main>
 </body>
 </html>
