@@ -121,11 +121,15 @@ article.is-full
 		margin-top: -48px
 
 .projects
-	.project-image
-		min-height: 400px
-		background-size: cover
-		background-position: top center
+	img
 		border-radius: 5%
+		transition: box-shadow 0.8s
+		&:hover
+			box-shadow: 0 0 22px 0 hsla(0, 0%, 81%, 0.82)
+	.project-image img
+		margin: 1rem
+	.project-image-mobile img
+		margin-bottom: 1rem
 
 .interesting-top
 	border-top: 15px solid $interesting
@@ -136,6 +140,9 @@ article.is-full
 
 .shadow
 	box-shadow: 0 3px 16px #888
+
+.brick-wall
+	background-image: url('../backgrounds/brick-wall.png')
 
 /*------------------- Misc --------------------------*/
 .no-padding-top

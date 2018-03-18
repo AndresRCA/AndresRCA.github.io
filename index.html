@@ -27,17 +27,17 @@
 			<h1 class="title">Andres Castillo</h1>
 			<h2 class="subtitle">Full stack developer in training</h2>
 			<div class="social-media">
-				<a href="#" class="media-item">
-					<span class="icon"><i class="fa fa-github"></i></span>
+				<a href="https://github.com/AndresRCA" class="media-item">
+					<span class="icon is-size-1"><i class="fa fa-github"></i></span>
 				</a>
-				<a href="#" class="media-item">
-					<b>Linked</b>&nbsp;<span class="icon"><i class="fa fa-linkedin"></i></span>
+				<a href="https://www.linkedin.com/in/andres-castillo-439bb3124/" class="media-item">
+					<b class="is-size-4">Linked</b>&nbsp;<span class="icon is-medium is-size-4"><i class="fa fa-linkedin"></i></span>
 				</a>
 			</div>
 		</div>
 	</header>
 	<main>
-		<section class="section">
+		<section class="section brick-wall">
 			<div class="container has-text-centered content">
 				<h1>Who am I?</h1>
 				<p>
@@ -48,7 +48,7 @@
 		<div class="hero is-dark is-bold gold-top shadow">
 			<div class="container">
 				<div class="hero-head has-text-centered">
-					<h2 class="title" style="margin-top: 40px">What tools do I use?</h2>
+					<h2 class="title" style="margin-top: 40px"><span class="icon"><i class="fa fa-wrench"></i></span>&nbsp;&nbsp;What tools do I use?</h2>
 					<hr>
 				</div>
 				<div class="hero-body tools">
@@ -57,7 +57,7 @@
 						<article class="column is-4 tool reveal">
 							<div class="level">
 								<div class="tool-header" style="background-image: url('./images/VueJs.jpeg');"></div>
-								<a href="https://vuejs.org/" class="level-item">Find out more!</a>
+								<a href="https://vuejs.org/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
 							</div>
 							<div class="tool-body">
 								<p class="content">
@@ -71,7 +71,7 @@
 						<article class="column is-4 tool reveal">
 							<div class="level">
 								<div class="tool-header" style="background-image: url('./images/bulmaCSS.png');"></div>
-								<a href="https://bulma.io/" class="level-item" style="color: #333">Find out more!</a>
+								<a href="https://bulma.io/" class="level-item" style="color: #333"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
 							</div>
 							<div class="tool-body">
 								<p class="content">
@@ -82,7 +82,7 @@
 						<article class="column is-4 tool reveal">
 							<div class="level">
 								<div class="tool-header" style="background-image: url('./images/Bootstrap.png');"></div>
-								<a href="https://getbootstrap.com/" class="level-item">Find out more!</a>
+								<a href="https://getbootstrap.com/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
 							</div>
 							<div class="tool-body">
 								<p class="content">
@@ -96,7 +96,7 @@
 						<article class="column is-4 tool reveal">
 							<div class="level">
 								<div class="tool-header" style="background-image: url('./images/Axios.png');"></div>
-								<a href="https://github.com/axios/axios" class="level-item" style="color: #333">Find out more!</a>
+								<a href="https://github.com/axios/axios" class="level-item" style="color: #333"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
 							</div>
 							<div class="tool-body">
 								<p class="content">
@@ -107,7 +107,7 @@
 						<article class="column is-4 tool reveal">
 							<div class="level">
 								<div class="tool-header" style="background-image: url('./images/jQuery.jpg');"></div>
-								<a href="https://jquery.com/" class="level-item">Find out more!</a>
+								<a href="https://jquery.com/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
 							</div>
 							<div class="tool-body">
 								<p class="content">
@@ -130,7 +130,7 @@
 					<article class="is-full tool reveal">
 						<div class="level">
 							<div class="tool-header" style="background-image: url('./images/laravel-banner.jpg');"></div>
-							<a href="https://laravel.com/" class="level-item">Find out more!</a>
+							<a href="https://laravel.com/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>&nbsp;Find out more!</a>
 						</div>
 						<div class="tool-body">
 							<p class="content">
@@ -141,7 +141,7 @@
 				</div>
 			</div>
 		</div>
-		<section class="section">
+		<section class="section brick-wall">
 			<div class="container content">
 				<h1>Wanna check out my work?</h1>
 				<p>
@@ -153,14 +153,36 @@
 				</blockquote>
 			</div>
 		</section>
-		<div class="hero is-dark is-medium interesting-top projects">
+		<div class="hero is-dark interesting-top projects" style="background-image: url('./backgrounds/food.png')">
 			<div class="hero-body">
-				<div class="columns">
-					<div class="column is-5">
-						<h1 class="title is-2">Check out this all-around website</h1>
-						<h2 class="subtitle is-3">It's very nice</h2>
-					</div>
-					<div class="column is-7 project-image" style="background-image: url('./images/Vue-project.png');"></div>
+				<!--instead of columns, maybe just make the image float-->
+				<h1 class="title is-2">Check out this all-around website</h1>
+				<h2 class="subtitle is-3">It's very nice</h2>
+				<!--for mobile users it is width: 100%, also there's a weird padding issue-->
+				<div class="project-image-mobile is-hidden-tablet">
+					<img src="./images/Vue-project.png" alt="Vue-project image" class="image">
+				</div>
+				<!--for tablet+ users-->
+				<div class="project-image is-hidden-mobile">
+					<a href="https://github.com/AndresRCA/Vue-project">
+						<img src="./images/Vue-project.png" alt="Vue-project image" class="image is-pulled-right" style="width: 60%;">
+					</a>
+				</div>		
+				<div class="content is-hidden-mobile">
+					<p>
+						The technologies I used for this project were <em>so many</em>, you have <em>no idea</em>, I first initialized this project when I started to learn Vue.js, now that I think about it, finishing this project without it would have <em>never</em> happened.
+					</p>
+					<p>
+						This was actually my first website that contained various views, I named them <b>"Home"</b>, <b>"Cooking"</b>, <b>"Video Games"</b> and <b>"Programming"</b>, every one of them was called after things I like very much, except <b>"Home"</b> obviously, that's just the root of the site. The <b>"Cooking"</b> and <b>"Programming"</b> section take their looks from mostly blogs, specially the <b>"Programming"</b>, it's designed to display useful information in a readable format accesible to all browsers and viewports, the cooking section is designed to display many awesome recipes in a creative list where the items resemble hamburgers while still keeping harmony with the color profile of the section itself.
+					</p>
+				</div>
+				<div class="content is-hidden-tablet">
+					<p>
+						The technologies I used for this project were so many, you have no idea, I first initialized this project when I started to learn Vue.js, now that I think about it, finishing this project without it would have <em>never</em> happened.
+					</p>
+					<p>
+						This was actually my first website that contained various views, I named them <b>"Home"</b>, <b>"Cooking"</b>, <b>"Video Games"</b> and <b>"Programming"</b>, every one of them was called after things I like very much, except <b>"Home"</b> obviously, that's just the root of the site. The <b>"Cooking"</b> and <b>"Programming"</b> section take their looks from mostly blogs, specially the <b>"Programming"</b>, it's designed to display useful information in a readable format accesible to all browsers and viewports, the cooking section is designed to display many awesome recipes in a creative list where the items resemble hamburgers while still keeping harmony with the color profile of the section itself.
+					</p>
 				</div>
 			</div>
 		</div>

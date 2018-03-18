@@ -10191,11 +10191,18 @@ article.is-full .tool-body {
   margin-top: -48px;
 }
 
-.projects .project-image {
-  min-height: 400px;
-  background-size: cover;
-  background-position: top center;
+.projects img {
   border-radius: 5%;
+  transition: box-shadow 0.8s;
+}
+.projects img:hover {
+  box-shadow: 0 0 22px 0 rgba(207, 207, 207, 0.82);
+}
+.projects .project-image img {
+  margin: 1rem;
+}
+.projects .project-image-mobile img {
+  margin-bottom: 1rem;
 }
 
 .interesting-top {
@@ -10209,6 +10216,10 @@ article.is-full .tool-body {
 
 .shadow {
   box-shadow: 0 3px 16px #888;
+}
+
+.brick-wall {
+  background-image: url("../backgrounds/brick-wall.png");
 }
 
 /*------------------- Misc -------------------------- */
