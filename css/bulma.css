@@ -10115,7 +10115,7 @@ header .hero-body .profile {
   margin: auto;
   margin-bottom: 10px;
   background-color: whitesmoke;
-  width: 400px;
+  max-width: 400px;
   height: 300px;
   border-radius: 35%;
 }
@@ -10139,7 +10139,8 @@ header .hero-body .social-media .media-item:last-child .icon {
 }
 .gold-top hr {
   border: 2px solid #E8AE3D;
-  margin: 0 20%;
+  margin: auto;
+  width: 15rem;
 }
 
 .tools .level, .tools .is-multiline {
