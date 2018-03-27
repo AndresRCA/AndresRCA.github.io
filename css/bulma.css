@@ -10192,23 +10192,30 @@ article.is-full .tool-body {
   margin-top: -48px;
 }
 
+.projects .project-image {
+  padding: 1rem;
+}
 .projects .project-image img {
-  margin: 1rem;
   border-radius: 5%;
   transition: box-shadow 0.8s;
 }
 .projects .project-image img:hover {
   box-shadow: 0 0 22px 0 rgba(207, 207, 207, 0.82);
 }
-.projects .project-image-mobile img {
-  margin-bottom: 1rem;
-  border-radius: 5%;
-  transition: box-shadow 0.8s;
-}
-.projects .project-image-mobile img:hover {
-  box-shadow: 0 0 22px 0 rgba(207, 207, 207, 0.82);
+
+/* mobile: width = 100%; float = none; */
+/* tablet+: width = 60%; float = right; */
+#Swipe {
+  width: 60%;
+  float: right;
 }
 
+@media screen and (max-width: 768px) {
+  #Swipe {
+    width: 100% !important;
+    float: none !important;
+  }
+}
 .interesting-top {
   border-top: 15px solid #FFEEBF;
 }

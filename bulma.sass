@@ -122,18 +122,26 @@ article.is-full
 		margin-top: -48px
 
 .projects
-	.project-image img
-		margin: 1rem
-		border-radius: 5%
-		transition: box-shadow 0.8s
-		&:hover
-			box-shadow: 0 0 22px 0 hsla(0, 0%, 81%, 0.82)
-	.project-image-mobile img
-		margin-bottom: 1rem
-		border-radius: 5%
-		transition: box-shadow 0.8s
-		&:hover
-			box-shadow: 0 0 22px 0 hsla(0, 0%, 81%, 0.82)
+	.project-image
+		padding: 1rem
+		img
+			border-radius: 5%
+			transition: box-shadow 0.8s
+			&:hover
+				box-shadow: 0 0 22px 0 hsla(0, 0%, 81%, 0.82)
+
+/* mobile: width = 100%; float = none; */
+/* tablet+: width = 60%; float = right;*/
+//default state: tablet+
+#Swipe
+	width: 60%
+	float: right
+
+//for mobile
+@media screen and (max-width: 768px)
+	#Swipe
+		width: 100% !important
+		float: none !important
 
 .interesting-top
 	border-top: 15px solid $interesting

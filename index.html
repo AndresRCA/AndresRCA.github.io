@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="./css/bulma.css">
 	<!-- https://github.com/jlmakes/scrollreveal -->
 	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/swipe/2.0.0/swipe.min.js"></script>
 	<script>
     window.sr = ScrollReveal();
     // Add class to <html> if ScrollReveal is supported
@@ -18,6 +19,21 @@
   <style>
     /* Ensure elements load hidden before ScrollReveal runs */
     .sr .reveal { visibility: hidden; }
+    /*Swipe.js styles*/
+    .swipe {
+		  overflow: hidden;
+		  visibility: hidden;
+		  position: relative;
+		}
+		.swipe-wrap {
+		  overflow: hidden;
+		  position: relative;
+		}
+		.swipe-wrap > a {
+		  float:left;
+		  width:100%;
+		  position: relative;
+		}
   </style>
 </head>
 <body>
@@ -157,17 +173,23 @@
 			<div class="hero-body">
 				<h1 class="title is-2">Check out this all-around website</h1>
 				<h2 class="subtitle is-3">It's very nice</h2>
-				<!--for mobile users it is width: 100%-->
-				<div class="project-image-mobile is-hidden-tablet">
-					<img src="./images/Vue-project.png" alt="Vue-project image" class="image">
-				</div>
-				<!--for tablet+ users-->
-				<div class="project-image is-hidden-mobile">
-					<a href="https://github.com/AndresRCA/Vue-project">
-						<img src="./images/Vue-project.png" alt="Vue-project image" class="image is-pulled-right" style="width: 60%;">
-					</a>
-				</div>		
-				<div class="content is-hidden-mobile">
+				<div id="Swipe" class="swipe is-pulled-right" style="width: 60%">
+					<div class="swipe-wrap">
+						<a href="https://github.com/AndresRCA/Vue-project/tree/master" class="project-image">
+							<img src="./images/vue-project-Home.png" alt="Vue-project image" class="image">
+						</a>
+						<a href="https://github.com/AndresRCA/Vue-project/tree/master" class="project-image">
+							<img src="./images/vue-project-Cooking.png" alt="Vue-project image" class="image">
+						</a>
+						<a href="https://github.com/AndresRCA/Vue-project/tree/master" class="project-image">
+							<img src="./images/vue-project-Videogames.png" alt="Vue-project image" class="image">
+						</a>
+						<a href="https://github.com/AndresRCA/Vue-project/tree/master" class="project-image">
+							<img src="./images/vue-project-Programming.png" alt="Vue-project image" class="image">
+						</a>
+					</div>
+				</div>	
+				<div class="content">
 					<p>
 						The technologies I used for this project were <em>so many</em>, you have <em>no idea</em>, I first initialized this project when I started learning Vue.js, now that I think about it, finishing this project without it would've been <em>impossible</em>.
 					</p>
@@ -175,18 +197,10 @@
 						This was actually my first website that contained various views, I named them <b>"Home"</b>, <b>"Cooking"</b>, <b>"Video Games"</b> and <b>"Programming"</b>, every one of them was called after things I like very much, except <b>"Home"</b> obviously, that's just the root of the site. The <b>"Cooking"</b> and <b>"Programming"</b> section take their looks from mostly blogs, specially the <b>"Programming"</b> one, it's designed to display useful information in a readable format accesible to all browsers and viewports, the cooking section is designed to display many awesome recipes in a creative list where the items resemble hamburgers while still keeping harmony with the color profile of the section itself.
 					</p>
 				</div>
-				<div class="content is-hidden-tablet">
-					<p>
-						The technologies I used for this project were so many, you have no idea, I first initialized this project when I started to learn Vue.js, now that I think about it, finishing this project without it would have <em>never</em> happened.
-					</p>
-					<p>
-						This was actually my first website that contained various views, I named them <b>"Home"</b>, <b>"Cooking"</b>, <b>"Video Games"</b> and <b>"Programming"</b>, every one of them was called after things I like very much, except <b>"Home"</b> obviously, that's just the root of the site. The <b>"Cooking"</b> and <b>"Programming"</b> section take their looks from mostly blogs, specially the <b>"Programming"</b>, it's designed to display useful information in a readable format accesible to all browsers and viewports, the cooking section is designed to display many awesome recipes in a creative list where the items resemble hamburgers while still keeping harmony with the color profile of the section itself.
-					</p>
-				</div>
 			</div>
 		</div>
 	</main>
-	<!-- element reveals -->
+	<!-- element reveals + carousel implementation -->
 	<script>
 		window.sr = ScrollReveal({
 			scale: 0.7,
@@ -205,6 +219,13 @@
 			sr.reveal(second_row, 450);
 			sr.reveal(third_row, 450);
 		}
+
+		//carousel for element with id of 'Swipe'
+		window.mySwipe = Swipe(document.getElementById('Swipe'), {
+		  auto: 4000,
+		  speed: 800,
+		  continuous: true
+		});
 	</script>
 </body>
 </html>
