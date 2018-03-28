@@ -131,16 +131,17 @@
 								</p>
 							</div>
 						</article>
-						<!-- <article class="column is-4 tool reveal">
-							<div id="other" class="level">
-								<a href="#" style="font-size: 3rem; color: #333" class="level-item">Other...</a>
+						<article id="other" class="column is-4 tool reveal">
+							<div class="level">
+								<div class="tool-header" style="background-color: white"></div>
+								<a href="#" style="color: #333" class="level-item"><span class="icon"><i class="fa fa-book"></i></span>&nbsp;Other...</a>
 							</div>
 							<div class="tool-body">
 								<p class="content">
-									I really use whatever library I can find that can make my job easier like the one I'm using fot this site, scrollreveal.js, it's only 3.3KB in size and it creates these fun enter animations for elements that come into view. I do have rules though, if it can be done with vanilla javascript or if a library is very heavy, I won't use it.
+									I really use whatever library I can find that can make my job easier like the ones I'm using fot this site, scrollreveal.js and swipe.js. scrollreveal.js is only 3.3KB in size and it creates these fun enter animations for elements that come into view, while swipe.js helps me create a carousel and much more if I wish, it's a bit old but it works. I do have rules for choosing a library though, if it can be done with vanilla javascript or if a library is very heavy, I won't use it.
 								</p>
 							</div>
-						</article> -->
+						</article>
 					</div>
 					<h3 class="subtitle is-4 has-text-centered-mobile"><span class="icon"><i class="fa fa-server"></i></span> Back end tools</h3>
 					<article class="is-full tool reveal">
@@ -212,7 +213,7 @@
 		}else{
 			var rows = Array.prototype.slice.call(tools);
 			var first_row = rows.splice(0, 3); //I take the [0], [1], [2]
-			var second_row = rows.splice(0, 2); //I take the new [0], [1]
+			var second_row = rows.splice(0, 3); //I take the new [0], [1], [2]
 			var third_row = rows.splice(0); //I take the last one, [0]
 
 			sr.reveal(first_row, 450); //a delay for a nice effect in the same row
