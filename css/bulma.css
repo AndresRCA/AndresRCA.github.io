@@ -10140,7 +10140,9 @@ header .hero-body .social-media .media-item:last-child .icon {
 .gold-top hr {
   border: 2px solid #E8AE3D;
   margin: auto;
-  width: 15rem;
+  width: 27rem;
+  position: relative;
+  z-index: 1;
 }
 
 .tools .level, .tools .is-multiline {
