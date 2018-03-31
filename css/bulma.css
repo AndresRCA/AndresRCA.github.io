@@ -10104,20 +10104,12 @@ label.panel-block:hover {
 
 /*------------------- Main -------------------------- */
 header {
-  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-  background-color: #131313 !important;
-  background-size: 20px 20px;
+  background-image: url("../images/meAndFriends.jpg");
+  background-size: cover;
+  background-position: center;
 }
 header .hero-body {
   text-align: center;
-}
-header .hero-body .profile {
-  margin: auto;
-  margin-bottom: 10px;
-  background-color: whitesmoke;
-  max-width: 400px;
-  height: 300px;
-  border-radius: 35%;
 }
 header .hero-body .social-media {
   margin: auto;
@@ -10125,6 +10117,9 @@ header .hero-body .social-media {
 header .hero-body .social-media .media-item {
   margin: 0 15px;
   display: inline-block;
+}
+header .hero-body .social-media .media-item:first-child > span > i {
+  color: #333;
 }
 header .hero-body .social-media .media-item:last-child {
   color: #fff;
