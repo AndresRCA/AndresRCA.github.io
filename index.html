@@ -200,6 +200,17 @@
 				</div>
 			</div>
 		</div>
+		<aside class="content no-margin-bottom has-text-centered">
+			<h2 id="moreToCome">More to come</h2>
+			<h2 class="dot">.</h2>
+			<h2 class="dot">.</h2>
+			<h2 class="dot">.</h2>
+		</aside>
+		<div class="hero is-deep">
+			<div class="hero-body" style="min-height: 200px">
+				
+			</div>
+		</div>
 	</main>
 	<!-- element reveals + carousel implementation -->
 	<script>
@@ -208,6 +219,8 @@
 			rotate: {x: 70, y: 30, z: 0}
 		});
 		var tools = document.querySelectorAll('.tool');
+		var moreToCome = document.getElementById('moreToCome');
+		var dots = document.querySelectorAll('.dot');
 		if(window.innerWidth <= 768){ //if viewport is mobile just reveal items in a normal fashion
 			sr.reveal(tools);
 		}else{
@@ -220,6 +233,8 @@
 			sr.reveal(second_row, 450);
 			sr.reveal(third_row, 450);
 		}
+		sr.reveal(moreToCome, {rotate: {x: 0, y: 0}, easing: 'ease-in-out'}, 450);
+		sr.reveal(dots, 900);
 
 		//carousel for element with id of 'Swipe'
 		window.mySwipe = Swipe(document.getElementById('Swipe'), {
