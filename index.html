@@ -80,7 +80,7 @@
 									<b>Vue.js</b> is a javascript MVC <small>(Model View Controller)</small> library/framework, <a href="https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/">here's an interesting article</a> that mentions the prominent UI frameworks, which includes React.js, Angular.js and of course, Vue.js.
 								</p>
 								<p>
-									Vue.js allows me to do many great things like control the data displayed on a website, display components, apply javascript hooks, manage events, add animations with third party support such as animate.css, etc. As you can see, it can do many things that jQuery does, however, Vue.js can do better and more <em>elegantly</em>, if you want to learn more just check out their <a href="https://vuejs.org/">website</a>, I'm sure you'll love it.
+									Vue.js allows me to do many great things like control the data displayed on a website, display components, apply javascript hooks, manage events, add animations with third party support such as animate.css, etc. As you can see, it can do many things that jQuery does, however, Vue.js can do it better and more <em>elegantly</em>, if you want to learn more just check out their <a href="https://vuejs.org/">website</a>, I'm sure you'll love it.
 								</p>
 							</div>
 						</article>
@@ -91,7 +91,7 @@
 							</div>
 							<div class="tool-body">
 								<p class="content">
-									<b>Bulma</b> is a <em>wonderful</em> CSS framework, I'm actually using it right now in this site! As you can see, Bulma allows me to display simple elements with modern styling without many problems. I have found that Bulma works very nicely with javascript MVC libraries like Vue thanks to Bulma's many class uses such as the navbar burger, dynamic background colors, toggling classes and many more things.
+									<b>Bulma</b> is a <em>wonderful</em> CSS framework, I'm actually using it right now in this site! As you can see, Bulma allows me to display simple elements with modern styling without many problems. I have found that Bulma works very nicely with javascript MVC libraries like Vue, thanks to Bulma's many class uses such as the navbar burger, dynamic background colors, toggling classes and many more things.
 								</p>
 							</div>
 						</article>
@@ -200,15 +200,35 @@
 				</div>
 			</div>
 		</div>
-		<aside class="content no-margin-bottom has-text-centered">
-			<h2 id="moreToCome">More to come</h2>
-			<h2 class="dot">.</h2>
-			<h2 class="dot">.</h2>
-			<h2 class="dot">.</h2>
-		</aside>
+		<aside class="no-margin-bottom content has-text-centered"></aside>
 		<div class="hero is-deep">
 			<div class="hero-body" style="min-height: 200px">
-				
+				<div>
+					<h1 class="title is-centered">Probabilites Generator</h1>
+					<h2 class="subtitle is-centered">
+						A dynamic way to input combinatory aleatory experiments data and get the result of the experiment through a special algorithm I made
+					</h2>
+					<div class="columns projects">
+						<div class="column is-6">
+							<a href="https://codepen.io/AndresRCA/pen/WKreqg" class="project-image">
+								<img style="border: 1px solid #ffffff4d" src="./images/Prob1.png" alt="probabilities" class="image">
+							</a>
+						</div>
+						<div class="column is-6">
+							<a href="https://codepen.io/AndresRCA/pen/WKreqg" class="project-image">
+								<img style="border: 1px solid #ffffff4d" src="./images/Prob2.png" alt="probabilities" class="image">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<p>
+						This is something I made when I was learning about probability at my university, it's basically a simulation of the "balls in a box" scenario, the user can add as many balls that he wants inside a box, and can calculate the probability of a certain event.
+					</p>
+					<p>
+						This project uses Vue.js and Plotly.js which is used for graphing data in a variety of ways. For the style I just went with plain Bulma CSS.
+					</p>
+				</div>
 			</div>
 		</div>
 	</main>
@@ -233,8 +253,6 @@
 			sr.reveal(second_row, 450);
 			sr.reveal(third_row, 450);
 		}
-		sr.reveal(moreToCome, {rotate: {x: 0, y: 0}, easing: 'ease-in-out'}, 450);
-		sr.reveal(dots, 900);
 
 		//carousel for element with id of 'Swipe'
 		window.mySwipe = Swipe(document.getElementById('Swipe'), {
