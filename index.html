@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/bulma.css">
 	<!-- https://github.com/jlmakes/scrollreveal -->
-	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<script src="https://unpkg.com/scrollreveal@3.4.0/dist/scrollreveal.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/swipe/2.0.0/swipe.min.js"></script>
 	<script>
     window.sr = ScrollReveal();
@@ -18,10 +18,10 @@
     }
   </script>
   <style>
-    /* Ensure elements load hidden before ScrollReveal runs */
-    .sr .reveal { visibility: hidden; }
-    /*Swipe.js styles*/
-    .swipe {
+  	/* Ensure elements load hidden before ScrollReveal runs */
+		.sr .reveal { visibility: hidden; }
+		/*Swipe.js styles*/
+		.swipe {
 		  overflow: hidden;
 		  visibility: hidden;
 		  position: relative;
@@ -37,7 +37,7 @@
 		}
   </style>
 </head>
-<body>
+<body class="sr">
 	<header class="hero is-header is-dark is-medium shadow"><!-- shadow is doing something weird, add style instead -->
 		<div class="hero-body">
 			<h1 class="title">Andres Castillo</h1>
@@ -239,8 +239,6 @@
 			rotate: {x: 70, y: 30, z: 0}
 		});
 		var tools = document.querySelectorAll('.tool');
-		var moreToCome = document.getElementById('moreToCome');
-		var dots = document.querySelectorAll('.dot');
 		if(window.innerWidth <= 768){ //if viewport is mobile just reveal items in a normal fashion
 			sr.reveal(tools);
 		}else{
