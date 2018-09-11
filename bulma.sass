@@ -85,10 +85,11 @@ header
 
 article > .level
 	display: block
+	height: 200px
 	.tool-header
 		background-size: cover
-		background-position: center
 		height: 200px
+		background-position: center
 		transition: filter 0.6s
 	a
 		font-weight: 300
@@ -102,6 +103,8 @@ article > .level
 		opacity: 1
 
 #other
+	.level
+		height: 200px
 	.tool-header + a
 		font-weight: 200
 		opacity: 1
@@ -112,13 +115,10 @@ article > .level
 			transform: scale(1.1, 1.1)
 	.tool-header:hover + a
 		transform: scale(1.1, 1.1)
-	.tool-body
-		margin-top: -72px
 	
 .tool-body
 	box-shadow: inset 0px 3px 10px -4px #888
 	padding: 15px
-	margin-top: -24px
 	background-color: whitesmoke
 	color: $body-color
 	a
@@ -127,13 +127,13 @@ article > .level
 			color: #3273dc !important
 
 article.is-full
+	.level
+		height: 300px
 	.tool-header
 		height: 300px
 	a
 		font-size: 2rem
 		bottom: 178px
-	.tool-body
-		margin-top: -48px
 
 .projects
 	.project-image
@@ -156,6 +156,8 @@ article.is-full
 	#Swipe
 		width: 100% !important
 		float: none !important
+	#guy-bar
+		width: 65%
 
 .interesting-top
 	border-top: 15px solid $interesting
