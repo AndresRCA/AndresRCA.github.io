@@ -38,7 +38,7 @@
 	</style>
 </head>
 <body class="sr">
-	<header class="hero is-header is-dark is-medium shadow"><!-- shadow is doing something weird, add style instead -->
+	<header class="hero is-header is-dark is-medium shadow">
 		<div class="hero-body">
 			<h1 class="title">Andres Castillo</h1>
 			<h2 class="subtitle">Full Stack Developer</h2>
@@ -70,80 +70,61 @@
 				<div class="hero-body tools">
 					<h3 class="subtitle is-4 has-text-centered-mobile"><span class="icon is-medium"><i class="fa fa-laptop" style="font-size: 2rem"></i></span><span class="icon is-medium"><i class="fa fa-mobile" style="font-size: 2rem"></i></span>Front end tools</h3>
 					<div class="columns is-multiline">
-						<article class="column is-4 tool reveal">
+						<article class="column is-3 tool reveal">
 							<div class="level">
 								<div class="tool-header" style="background-image: url('./images/VueJs.jpeg');"></div>
 								<a href="https://vuejs.org/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
 							</div>
-							<div class="tool-body">
-								<p class="content">
-									<b>Vue.js</b> is a javascript MVC <small>(Model View Controller)</small> library/framework, <a href="https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/">here's an interesting article</a> that mentions the prominent UI frameworks, which includes React.js, Angular.js and of course, Vue.js.
-								</p>
-								<p>
-									Vue.js allows me to do many great things like control the data displayed on a website, display components, apply javascript hooks, manage events, add animations with third party support such as animate.css, etc. As you can see, it can do many things that jQuery does, however, Vue.js can do it better and more <em>elegantly</em>, if you want to learn more just check out their <a href="https://vuejs.org/">website</a>, I'm sure you'll love it. Also! I have worked with Vue Router and Vuex if that's your thing.
-								</p>
+						</article>
+						<article class="column is-3 tool reveal">
+							<div class="level">
+								<div class="tool-header" style="background-image: url('./images/reactLogo.png');"></div>
+								<a href="https://reactjs.org/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
 							</div>
 						</article>
-						<article class="column is-4 tool reveal">
+						<article class="column is-3 tool reveal">
+							<div class="level">
+								<div class="tool-header" style="background-image: url('./images/typescriptLogo.png');"></div>
+								<a href="https://www.typescriptlang.org/" class="level-item" style="color: #333"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
+							</div>
+						</article>
+						<article class="column is-3 tool reveal">
+							<div class="level">
+								<div class="tool-header" style="background-image: url('./images/webpackLogo.png');"></div>
+								<a href="https://webpack.js.org/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
+							</div>
+						</article>
+						<article class="column is-3 tool reveal">
 							<div class="level">
 								<div class="tool-header" style="background-image: url('./images/bulmaCSS.png');"></div>
 								<a href="https://bulma.io/" class="level-item" style="color: #333"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
 							</div>
-							<div class="tool-body">
-								<p class="content">
-									<b>Bulma</b> is a <em>wonderful</em> CSS framework, I'm actually using it right now in this site! As you can see, Bulma allows me to display simple elements with modern styling without many problems. I have found that Bulma works very nicely with javascript MVC libraries like Vue, thanks to Bulma's many class uses such as the navbar burger, dynamic background colors, toggling classes and many more things.
-								</p>
-							</div>
 						</article>
-						<article class="column is-4 tool reveal">
+						<article class="column is-3 tool reveal">
 							<div class="level">
 								<div class="tool-header" style="background-image: url('./images/Bootstrap.png');"></div>
 								<a href="https://getbootstrap.com/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
 							</div>
-							<div class="tool-body">
-								<p class="content">
-									<b>Bootstrap</b> is the first CSS framework I learned, it's a very powerful tool for styling web pages but it comes with some inconveniences such as already having high priority predefined style for generic tags such as <code>&lt;h1-6&gt;, &lt;ol&gt;, &lt;blockquote&gt;, &lt;p&gt;</code>, etc. This framework is what I call CSS with batteries included, which is why I prefer Bulma.
-								</p>
-								<p>
-									<b><em>Fun fact</em></b>: I decided to move to Bulma after Bootstrap released its 4th version, I noticed that their new version borrowed some things from bulma and over complicated itself, their naming conventions didn't appeal to me and after checking out Bulma, memorizing class names and applying them seemed more intuitive.
-								</p>
-							</div>
 						</article>
-						<article class="column is-4 tool reveal">
+						<article class="column is-3 tool reveal">
 							<div class="level">
-								<div class="tool-header" style="background-image: url('./images/Axios.png');"></div>
-								<a href="https://github.com/axios/axios" class="level-item" style="color: #333"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
-							</div>
-							<div class="tool-body">
-								<p class="content">
-									<b>Axios</b> is a simple library that helps writing clean and safe HTTP requests.
-								</p>
+								<div class="tool-header" style="background-image: url('./images/sassLogo.jpg');"></div>
+								<a href="https://sass-lang.com/" class="level-item" style="color: #333"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
 							</div>
 						</article>
-						<article class="column is-4 tool reveal">
-							<div class="level">
-								<div class="tool-header" style="background-image: url('./images/jQuery.jpg');"></div>
-								<a href="https://jquery.com/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
-							</div>
-							<div class="tool-body">
-								<p class="content">
-									<em>Everybody</em> knows <b>jQuery</b>, it's that library everyone wants to get rid off but somehow need it for something such as a particular animation that occurs only when certain conditions are met, and for some people its ajax function.
-								</p>
-							</div>
-						</article>
-						<article id="other" class="column is-4 tool reveal">
+						<article id="other" class="column is-3 tool reveal">
 							<div class="level">
 								<div class="tool-header" style="background-color: white"></div>
 								<a href="#" style="color: #333" class="level-item"><span class="icon"><i class="fa fa-book"></i></span>&nbsp;Other...</a>
 							</div>
-							<div class="tool-body">
-								<p class="content">
-									I really use whatever library I can find that can make my job easier like the ones I'm using fot this site, scrollreveal.js and swipe.js. scrollreveal.js is only 3.3KB in size and it creates these fun enter animations for elements that come into view, while swipe.js helps me create a carousel and much more if I wish, it's a bit old but it works. I do have rules for choosing a library though, if it can be done with vanilla javascript or if a library is very heavy, I won't use it.
-								</p>
-							</div>
 						</article>
 					</div>
 					<h3 class="subtitle is-4 has-text-centered-mobile"><span class="icon"><i class="fa fa-server"></i></span> Back end tools</h3>
+					<article style="margin-bottom: 15px;" class="is-full tool reveal">
+						<div class="level">
+							<div class="tool-header" style="background-image: url('./images/node.js-logo.png');"></div>
+							<a href="https://nodejs.org/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>&nbsp;Find out more!</a>
+					</article>
 					<article style="margin-bottom: 15px;" class="is-full tool reveal">
 						<div class="level">
 							<div class="tool-header" style="background-image: url('./images/Django.png');"></div>
@@ -193,10 +174,10 @@
 				</div>	
 				<div class="content">
 					<p>
-						The technologies I used for this project were <em>so many</em> at the time, I first initialized this project when I started learning Vue.js, now that I think about it, finishing this project without it would've been <em>impossible</em>.
+						The technologies I used for this project were <em>so many</em> at the time, I first initialized this project when I started learning Vue.js, now that I think about it, finishing this project without it would've been pretty hard for the beginner me.
 					</p>
 					<p>
-						This was actually my first website that contained various views, I named them <b>"Home"</b>, <b>"Cooking"</b>, <b>"Video Games"</b> and <b>"Programming"</b>, every one of them was called after things I like very much, except <b>"Home"</b> obviously, that's just the root of the site. The <b>"Cooking"</b> and <b>"Programming"</b> section take their looks from mostly blogs, specially the <b>"Programming"</b> one, it's designed to display useful information in a readable format accesible to all browsers and viewports, the cooking section is designed to display many awesome recipes in a creative list where the items resemble hamburgers while still keeping harmony with the color profile of the section itself.
+						This was actually my first website that contained various views so mind the rough look (what with the plain color usage, lack of images and whatnot), I named the views as <b>"Home"</b>, <b>"Cooking"</b>, <b>"Video Games"</b> and <b>"Programming"</b>, every one of them was called after things I like very much, except <b>"Home"</b> obviously, that's just the root of the site. The <b>"Cooking"</b> and <b>"Programming"</b> section take their looks from mostly blogs, specially the <b>"Programming"</b> one, it's designed to display useful information in a readable format accesible to all browsers and viewports, the cooking section is designed to display many awesome recipes in a creative list where the items resemble hamburgers while still keeping harmony with the color profile of the section itself.
 					</p>
 				</div>
 			</div>
@@ -240,13 +221,14 @@
 			rotate: {x: 70, y: 30, z: 0}
 		});
 		var tools = document.querySelectorAll('.tool');
-		if(window.innerWidth <= 768){ //if viewport is mobile just reveal items in a normal fashion
+		if (window.innerWidth <= 768) { //if viewport is mobile just reveal items in a normal fashion
 			sr.reveal(tools);
-		}else{
+		}
+		else {
 			var rows = Array.prototype.slice.call(tools);
-			var first_row = rows.splice(0, 3); //I take the [0], [1], [2]
-			var second_row = rows.splice(0, 3); //I take the new [0], [1], [2]
-			var third_row = rows.splice(0); //I take the last one, [0]
+			var first_row = rows.splice(0, 4); //I take the [0], [1], [2], [3]
+			var second_row = rows.splice(0, 4); //I take the new [0], [1], [2], [3]
+			var third_row = rows.splice(0); //I take the last one, [0], [1], [2]
 
 			sr.reveal(first_row, 450); //a delay for a nice effect in the same row
 			sr.reveal(second_row, 450);
@@ -255,9 +237,9 @@
 
 		//carousel for element with id of 'Swipe'
 		window.mySwipe = Swipe(document.getElementById('Swipe'), {
-		  auto: 4000,
-		  speed: 800,
-		  continuous: true
+			auto: 4000,
+			speed: 800,
+			continuous: true
 		});
 	</script>
 </body>
