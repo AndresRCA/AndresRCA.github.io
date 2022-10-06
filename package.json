@@ -4,7 +4,6 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "node-sass -w --output-style=compressed style.sass css/style.css"
   },
   "repository": {
@@ -19,16 +18,7 @@
   },
   "homepage": "https://github.com/AndresRCA/AndresRCA.github.io#readme",
   "devDependencies": {
-    "css-loader": "^0.28.11",
-    "file-loader": "^1.1.11",
-    "node-sass": "^7.0.1",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.3",
-    "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14"
-  },
-  "dependencies": {
-    "scrollreveal": "^3.4.0",
-    "swipe-js": "^2.2.0"
+    "bulma": "^0.6.2",
+    "node-sass": "^7.0.3"
   }
 }

@@ -1,8 +1,8 @@
 @charset "utf-8"
 /*! bulma.io v0.6.2 | MIT License | github.com/jgthms/bulma */
 // 1. Import the initial variables
-@import "sass/utilities/initial-variables"
-@import "sass/utilities/functions"
+@import "node_modules/bulma/sass/utilities/initial-variables"
+@import "node_modules/bulma/sass/utilities/functions"
 
 //------------------ Example: ------------------
 // 4. Setup your Custom Colors
@@ -35,19 +35,19 @@ $github: #333
 $github-invert: findColorInvert($github)
 /*---------------------------------------------------*/
 // 5. Add new color variables to the color map.
-@import "sass/utilities/derived-variables.sass"
+@import "node_modules/bulma/sass/utilities/derived-variables.sass"
 $addColors: ("linkedin": ($linkedin, $linkedin-invert), "github": ($github, $github-invert), "attention": ($attention, $attention-invert), "interesting": ($interesting, $interesting-invert), "playful": ($playful, $playful-invert), "deep": ($deep, $deep-invert))
 $colors: map-merge($colors, $addColors)
 
 // 6. Import the rest of Bulma
-@import "sass/utilities/animations"
-@import "sass/utilities/controls"
-@import "sass/utilities/mixins"
-@import "sass/base/_all"
-@import "sass/elements/_all"
-@import "sass/components/_all"
-@import "sass/grid/_all"
-@import "sass/layout/_all"
+@import "node_modules/bulma/sass/utilities/animations"
+@import "node_modules/bulma/sass/utilities/controls"
+@import "node_modules/bulma/sass/utilities/mixins"
+@import "node_modules/bulma/sass/base/_all"
+@import "node_modules/bulma/sass/elements/_all"
+@import "node_modules/bulma/sass/components/_all"
+@import "node_modules/bulma/sass/grid/_all"
+@import "node_modules/bulma/sass/layout/_all"
 /*------------------- Main --------------------------*/
 header
 	background-image: url('../images/meAndFriends.jpg')
