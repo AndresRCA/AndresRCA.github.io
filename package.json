@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass -w --output-style=compressed style.sass css/style.css"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
   "devDependencies": {
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
-    "node-sass": "^4.8.3",
+    "node-sass": "^7.0.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "webpack": "^4.5.0",
