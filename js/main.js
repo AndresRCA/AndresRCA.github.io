@@ -2,6 +2,8 @@
 docSlider.init();
 // jquery text rotator
 $(".rotate").textrotator();
+// highlight.js
+hljs.highlightAll();
 
 function setAnimationProperties(el) {
 	// get data

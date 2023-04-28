@@ -274,10 +274,13 @@ h5 {
 /* start snippets */
 #snippets {
     background: #1a1a1a;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 #snippets h2 {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 #snippets .media {
@@ -350,58 +353,6 @@ h5 {
 
 /* end portfolio */
 
-/* start contact */
-
-#contact address {
-    padding-bottom: 18px;
-}
-
-#contact .contact-title {
-    font-size: 24px;
-    font-weight: bold;
-    padding-bottom: 20px;
-    color: #ffffff;
-}
-
-#contact .fa {
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    color: #D43F52;
-    width: 50px;
-    height: 50px;
-    line-height: 45px;
-    text-align: center;
-    margin-right: 20px;
-}
-
-#contact .form-control {
-    background: transparent;
-    border: 2px solid #999;
-    border-radius: 0;
-    box-shadow: none;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-#contact input {
-    height: 50px;
-}
-
-#contact input[type="submit"] {
-    background: #D43F52;
-    border: 2px solid transparent;
-    color: #ffffff;
-    font-weight: bold;
-    transition: all 0.4s ease-in-out;
-}
-
-#contact input[type="submit"]:hover {
-    background: #ffffff;
-    color: #D43F52;
-}
-
-/* end contact */
-
 /* start footer */
 footer {
     border-top: 1px solid #090909;
@@ -440,8 +391,8 @@ footer hr {
 .social-icon li a:hover {
     color: #D43F52;
 }
-
 /* end social icon */
+
 /* custom scrollbar */
 ::-webkit-scrollbar {
     width: 20px;
@@ -461,3 +412,19 @@ footer hr {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #444;
 }
+/* end custom scrollbar */
+
+/* custom panel (collapse) */
+.panel-custom {
+    border-color: #ddd;
+}
+.panel-custom > .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+.panel-custom > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #ddd;
+}
+/* end custom panel (collapse) */

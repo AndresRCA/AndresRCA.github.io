@@ -7,8 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>AndresRCA</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
-	<!-- bootstrap -->
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+	<!-- bootstrap v3.3.4 -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- font-awesome -->
 	<script src="https://kit.fontawesome.com/1c24a8e905.js" crossorigin="anonymous"></script>
@@ -18,6 +17,9 @@
 	<link rel="stylesheet" href="css/docSlider.css">
 	<!-- animate.css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- hightlight.js -->
+	<link rel="stylesheet" href="css/vs2015.min.css">
+	<script src="js/highlight.min.js"></script>
 	<!-- custom -->
 	<link rel="stylesheet" href="css/styles.css">
 </head>
@@ -86,7 +88,7 @@
 							</div>
 							<div class="media-body">
 								<h3 class="media-heading">Collaborative and patient</h3>
-								<p>I approach working with colleagues who may be resistant to feedback or collaboration with patience and persistence, seeking to build trust over time by finding common ground. Of course communication is something that requires the collaboration of the parties involved, so it's not like there's always a guarantee of things going well all the time, but from the get-go I make sure to establish that it's ok to be open and frank with me, and that my position will always be transparency when communicating.<!--<a rel="nofollow" href="https://pixabay.com">Pixabay</a>--></p>
+								<p>I approach working with colleagues who may be resistant to feedback or collaboration with patience and persistence, seeking to build trust over time by finding common ground. Of course communication is something that requires the collaboration of the parties involved, so it's not like there's always a guarantee of things going well all the time, but from the get-go I make sure to establish that it's ok to be open and frank with me, and that my position will always be transparency when communicating.<a rel="nofollow" href="https://pixabay.com">Pixabay</a></p>
 							</div>
 						</div>
 					</div>
@@ -171,7 +173,7 @@
 
 		<!-- start snippets -->
 		<section id="snippets">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12 bounce">
 						<h2>CODE SNIPPETS</h2>
@@ -179,42 +181,99 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-4 col-xs-11" data-animation="fadeIn" data-animation-delay="600">
-						<div class="media">
-							<div class="media-object media-left">
-								<i class="fa fa-laptop"></i>
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">...</h3>
-								<p>...</p>
+					<div class="col-md-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-custom">
+								<div class="panel-heading" role="tab" id="exampleOne">
+									<h4 class="panel-title">
+										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseExampleOne" aria-expanded="false" aria-controls="collapseOne">
+											Model for a form control
+										</a>
+									</h4>
+								</div>
+								<div id="collapseExampleOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exampleOne">
+									<div class="panel-body">
+										<pre><code class="language-typescript">
+// IFormControl.interface.ts
+export interface IJsonFormControl {
+  id: number;
+  description: string | null;
+  /**
+   * order for the control (1 would mean it's the first element in the form)
+   */
+  order: number;
+  styleRules?: IStyleRules;
+  control: IControl;
+  /**
+   * name of function called in the backend used to retrieve the data for the control object
+   */
+  dataSource: string | null;
+}
+
+// IControl.interface.ts
+export interface IControl&lt;T = any&gt; {
+  name: string;
+  tag?: 'input' | 'select' | 'textarea' | 'button';
+  label?: string;
+  /**
+   * the text to show inside a button when tag is 'button'
+   */
+  content?: string;
+  attributes?: {
+    type?: 'text' | 'radio' | 'checkbox' | 'number' | 'tel' | 'date' | 'email' | 'url' | 'search' | 'password';
+    placeholder?: string;
+    /**
+     * regex pattern as a string
+     */
+    pattern?: '[0-9]*' | '[0-9]{3}-[0-9]{7}';
+    required?: true;
+    disabled?: true;
+    /**
+     * the default value to place in a control, for example an input that's already filled out
+     */
+    value?: string | number | boolean | Object;
+    minLength?: number;
+    maxLength?: number;
+    min?: number;
+    max?: number;
+  },
+  /**
+   * refers to these validators: https://angular.io/api/forms/Validators#validators
+   */
+  validators?: Array&lt;'required' | 'requiredTrue' | 'minLength' | 'maxLength' | 'min' | 'max' | 'pattern' | 'email' | 'nullValidator' | 'compose' | 'composeAsync'&gt;;
+  /**
+   * data to fill the form control
+   */
+  data?: Array&lt;T&gt;;
+  /**
+   * method to execute (in the case of a button)
+   */
+  action?: string;
+  /**
+   * must be the name of a form control (this is for external controls that execute actions and fill another control)
+   */
+  fills?: string;
+  /**
+   * the name of the group the control belongs to.
+   */
+  group?: string;
+  /**
+   * button that appears to the right side of the control
+   */
+  buttonGroup?: 'add' | 'search';
+  /**
+   * button that appears to the left side of the control, usually used to specify units (like USD, BS, etc)
+   */
+  buttonLabel?: {
+    icon?: string;
+    content?: string;
+  }
+}</code></pre>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-
-					<div class="col-md-4 col-xs-11" data-animation="fadeIn" data-animation-delay="600">
-						<div class="media">
-							<div class="media-object media-left">
-								<i class="fa fa-link"></i>
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">...</h3>
-								<p>...</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-xs-11" data-animation="fadeIn" data-animation-delay="600">
-						<div class="media">
-							<div class="media-object media-left">
-								<i class="fa fa-paper-plane"></i>
-							</div>
-							<div class="media-body">
-								<h3 class="media-heading">...</h3>
-								<p>...</p>
-							</div>
-						</div>
-					</div>
-
 				</div>
 			</div>
 		</section>
@@ -297,8 +356,7 @@
 
 	<!-- jQuery -->
 	<script src="js/jquery.js"></script>
-	<!-- bootstrap -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+	<!-- bootstrap v3.3.4 -->
 	<script src="js/bootstrap.min.js"></script>
 	<!-- docSlider -->
 	<script src="js/docSlider.min.js"></script>
