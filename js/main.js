@@ -5,6 +5,10 @@ $(".rotate").textrotator();
 // highlight.js
 hljs.highlightAll();
 
+/**
+ * using the data attributes for el, set css properties for animations
+ * @param {Element} el 
+ */
 function setAnimationProperties(el) {
 	// get data
 	const duration = el.dataset.animationDuration;
@@ -18,17 +22,17 @@ function setAnimationProperties(el) {
 }
 
 // prepare element animations and observer
-const animationObserver = new IntersectionObserver((entries) => {
+const animationObserver = new IntersectionObserver((entries, observer) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
 			if (entry.target.classList.contains('invisible')) entry.target.classList.remove('invisible');
 			entry.target.classList.add('animate__' + entry.target.dataset.animation);
-		} else {
-			if (entry.target.dataset.animationStartInvisible) entry.target.classList.add('invisible');
-			entry.target.classList.remove('animate__' + entry.target.dataset.animation);
+			observer.unobserve(entry.target); // animate only once
 		}
 	});
 });
+
+// add elements to observer
 const animatedElements = document.querySelectorAll('.animate');
 animatedElements.forEach((el) => {
 	el.classList.add('animate__animated');

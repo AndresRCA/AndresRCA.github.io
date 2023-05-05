@@ -195,7 +195,6 @@ h5 {
 /* start work */
 #work {
     background: #1a1a1a;
-    /* overflow: hidden; */
 }
 
 #work h2 {
@@ -234,10 +233,6 @@ h5 {
 /* end work */
 
 /* start about */
-#about {
-    overflow: hidden;
-}
-
 #about h4 {
     padding: 15px 0;
     color: #D43F52;
