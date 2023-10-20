@@ -2029,6 +2029,355 @@ app.listen(PORT, () => {
 						</div>
 					</div>
 				</div>
+
+				<!-- Component for a customer support chatbox interface -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-custom">
+								<div class="panel-heading" role="tab" id="exampleEight">
+									<h4 class="panel-title">
+										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseExampleEight" aria-expanded="false" aria-controls="collapseOne">
+											Component for a customer support chatbox interface
+										</a>
+									</h4>
+								</div>
+								<div id="collapseExampleEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exampleEight">
+									<div class="panel-body">
+<pre><code class="language-typescript">import { OnInit, Component } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
+import { trigger, style, animate, transition } from '@angular/animations';
+import { Message, BotResponse, Button } from "../../../core/interfaces/customer-chatbox";
+import $ from "jquery";
+import { environment } from 'src/environments/environment.prod';
+import { FormBuilder, FormControlStatus, FormGroup, Validators } from "@angular/forms";
+import { v4 as uuidv4 } from 'uuid';
+
+/**
+  * CustomerChatbotComponent Documentation (mainly the Message object and related functions):
+  * 
+  *  ********************************************************************************
+  *  *  Message Box:                                          *  Related functions: *
+  *  *--------------------------------------------------------*---------------------*
+  *  *  message.content: body of text                         *  formatString()     *
+  *  *--------------------------------------------------------*---------------------*
+  *  *  message.form: forms the bot requests to be filled     *  createNewForm()    *
+  *  *    --&gt; formGroup                                       *  validateData()     *
+  *  *    --&gt; formControls                                    *                     *
+  *  *      --&gt; select: refers to &lt;select&gt;, contains the data *                     *
+  *  *      --&gt; (others)?: any other control can be added     *                     *
+  *  *          through createNewForm() by setting a new case *                     *
+  *  *--------------------------------------------------------*---------------------*
+  *  *  message.images: images to be shown                    *                     *
+  *  *--------------------------------------------------------*---------------------*
+  *  *  message.buttons: buttons with choices                 *  selectOption()     *
+  *  ********************************************************************************
+  *  
+  *  Role of this component: convert what BotResponse returns to a component the user can interact with
+  *  
+  */
+@Component({
+  selector: "app-customer-chatbot",
+  templateUrl: "./customer-chatbot.component.html",
+  styleUrls: ["./customer-chatbot.component.scss"],
+  animations: [
+    trigger("chatbox-minimize", [
+      transition(":enter", [
+        style({ height: "0vh" }),
+        animate("0.2s ease-out", style({ height: "70vh" }))
+      ]),
+      transition(":leave", [
+        animate("0.2s ease-out", style({ height: "0vh" }))
+      ])
+    ])
+  ]
+})
+export class CustomerChatbotComponent implements OnInit {
+	
+  private botAPI = environment.botAPI;
+  private sessionId = "";
+
+  // chatbox behaviour properties
+  public showChatbox = false; // refers to the entire chatbox
+  public isMinimized = false; // when true, only the .title is seen
+  public isWaitingForMessage = false; // shows the "user is typing..." kind of animation while user is waiting for bot to answer
+
+  public messages: Message[] = [];
+  public messageInput: string = ""; // text message input
+  private currentlyActiveForm: FormGroup | undefined;
+
+  constructor(private http: HttpClient, private fb: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.sessionId = `${uuidv4()}_${new Date().toISOString()}`;
+  }
+
+  /**
+    * Open the chatbox and initialize chat with it's first messages
+    */
+  public chatInit(): void {
+    this.showChatbox = true;
+
+    // create automatic bot message from the client
+    let welcomeMessage: Message = {
+      from: "bot",
+      content: "Welcome!",
+      timeSent: this.getCurrentTime()
+    };
+    // instead of this.updateChat(), I add the message directly since I don't want to move the scrollbar when the chat is initializing
+    this.messages.push(welcomeMessage);
+    this.isWaitingForMessage = true; // start the loading animation
+
+    // get first response from the bot API
+    this.getBotResponse("hello")
+      .then((botResponse: Message) => {
+        this.isWaitingForMessage = false; // stop the loading animation
+        this.messages.push(botResponse);
+      })
+      .catch((errorMessage: Message) => {
+        this.isWaitingForMessage = false;
+        this.messages.push(errorMessage); // message.error should be defined here
+    });
+  }
+
+  /**
+    * clear values from chat and essentially reset it
+    */
+  public destroyChat(): void {
+    this.messages = [];
+    this.showChatbox = false;
+    this.isMinimized = false;
+    this.sessionId = `${uuidv4()}_${new Date().toISOString()}`; // update session id
+  }
+
+  /**
+    * When clicking the tray icon or the title, the chatbox will minimize
+    */
+  public toggleMinimize(): void {
+    this.isMinimized = !this.isMinimized;
+  }
+
+  /**
+    * When chatbox open animation starts, adjust chatbox's body scrollbar so it's stuck to the bottom
+    */
+  public afterChatboxIsOpen(): void {
+    if (!this.isMinimized) { // when chatbox is being opened keep scrollbar stuck to the bottom
+      let chatboxBody = document.getElementById("chatbox-body");
+      if (chatboxBody) {
+        chatboxBody.scrollTop = chatboxBody.scrollHeight;
+      }
+    }
+  }
+
+  /**
+    * Send message to bot API and get response
+    */
+  public sendMessage(): void {
+    let validationResult = this.validateData(); // should validate whenever there's a form present
+    if (validationResult.status === "INVALID") {
+      this.updateChat({from: "bot", content: validationResult.message, timeSent: this.getCurrentTime()});
+      return;
+    }
+
+    let content = this.messageInput;
+    this.messageInput = ""; // clear &lt;input /&gt;'s text
+    this.updateChat({from: "user", content, timeSent: this.getCurrentTime()});
+    this.isWaitingForMessage = true; // start the loading animation
+
+    // wait for the bot's response
+    setTimeout(() => { // add a small delay to show the user message before immediately getting the bot's response (happens in cases when the response comes too quick)
+      this.getBotResponse(content)
+        .then((botResponse: Message) => {
+          this.isWaitingForMessage = false; // stop the loading animation
+          this.updateChat(botResponse);
+        })
+        .catch((errorMessage: Message) => {
+          this.isWaitingForMessage = false;
+          this.updateChat(errorMessage); // message.error should be defined here
+        })
+    }, 700);
+  }
+
+  private getBotResponse(message: string): Promise&lt;Message&gt; {
+    let postBody = {
+      "phone": this.sessionId,
+      "message": message,
+      "lic": "xxxxxxxxxx@x.xx",
+      "application": "web"
+    };
+
+    return new Promise((resolve, reject) => {
+      this.http.post(this.botAPI, postBody).subscribe((data: BotResponse) => {
+        if (data.status === "OK") {
+          let incomingMessage = data.msg || "Sorry I couldn't recognize what you meant.";
+
+          let botMessage: Message = {
+            from: "bot",
+            content: this.formatString(incomingMessage),
+            timeSent: this.getCurrentTime()
+          };
+
+          if (data.form != undefined) { // if data contains a form, create the means to display and manage it from the component
+            botMessage.form = {
+              formControls: data.form.formControls,
+              formGroup: this.createNewForm(data.form.formControls)
+            };
+				  	
+            this.currentlyActiveForm = botMessage.form.formGroup; // set the currently active form to do validations on
+          }
+  
+          resolve(botMessage);
+        } else {  
+          reject({
+            from: "bot",
+            content: "Sorry, there was a connectivity error with our bot, please try again later.",
+            timeSent: this.getCurrentTime(),
+            error: true
+          } as Message);
+        }
+      }, (error) => {
+        // for debugging I recomend logging this error inside this block
+        reject({
+          from: "bot",
+          content: "Sorry there was an issue with our bot, we will try to fix it as soon as possible.",
+          timeSent: this.getCurrentTime(),
+          error: true
+        } as Message);
+      });
+    });
+  }
+
+  /**
+    * Similar to sendMessage() but in the context of a `&lt;button&gt;` instead of `&lt;input /&gt;`
+    * @param option representation of `&lt;button&gt;` with the value it holds
+    */
+  public selectOption(option: Button): void {
+    // update chat with user's choice
+    this.updateChat({from: "user", content: option.value, timeSent: this.getCurrentTime()});
+    this.isWaitingForMessage = true;
+
+    // wait for the bot's response
+    this.getBotResponse(option.exec)
+      .then((botResponse: Message) => {
+        this.isWaitingForMessage = false; // stop the loading animation
+        this.updateChat(botResponse);
+      })
+      .catch((errorMessage: Message) => {
+        this.isWaitingForMessage = false;
+        this.updateChat(errorMessage); // message.error should be defined here
+      });
+  }
+
+  private updateChat(message: Message): void {
+    this.messages.push(message);
+
+    // keep the scrollbar stuck to the bottom
+    let chatboxBody = $("#chatbox-body");
+    if (chatboxBody) {
+      setTimeout(() => {
+        chatboxBody.animate({scrollTop: chatboxBody.prop("scrollHeight")}, 500);
+      }, 100);
+    }
+  }
+
+  /**
+    * Create a form group given the passed form controls
+    * @param formControls object with set of data which holds what type of control it is for (defined by the object keys) and what data to fill it with
+    * @returns the form group corresponding to the bot's message 
+    */
+  private createNewForm(formControls: Message["form"]["formControls"]): FormGroup {
+    let controls = {};
+    for (let controlType in formControls) {
+      switch (controlType) {
+        case "select":
+          controls[controlType] = ['', Validators.required]; // a &lt;select&gt; control should have this behaviour
+          break;
+        // add more cases here in line with Message.form.formControls property names when the need arises
+      }
+    }
+    
+    return this.fb.group(controls);
+  }
+	
+  /**
+    * custom validation when bot's response contains data that must be validated
+    * @returns 
+    */
+  private validateData(): {status: string, message: string} {
+    let validationResult = { status: "VALID", message: "" };
+    if (!this.currentlyActiveForm) return validationResult; // if there's no form there's no need to validate
+
+    if (!this.currentlyActiveForm.invalid) {
+      this.currentlyActiveForm = undefined; // clear the currently active form since validation gave a green light
+      return validationResult;
+    }
+
+    // if invalid is true, check for validation
+    let status: FormControlStatus = this.currentlyActiveForm.status; // see FormControlStatus for values
+    validationResult.status = status;
+    validationResult.message = "Please select a valid option.";
+    return validationResult;
+  }
+
+  /*--------------------- Helper functions --------------------*/
+  /**
+    * get current hours and minutes
+    * @returns string time in the form of hh:mm
+    */
+  private getCurrentTime(): string {
+    const date = new Date();
+    return String(date.getHours()).padStart(2, "0") + ":" + String(date.getMinutes()).padStart(2, "0");
+  }
+
+  /**
+    * format the string into something html can read and interpret
+    * @param str 
+    * @returns formatted string with html
+    */
+  private formatString(str: string): string {
+    str = str.replace(/\^\/.*$/g, ""); // remove the string that the server sends as ^{'object': 'foo'} (usually at the end)
+    str = str.replace(/\n\n\n/g, "\n\n");
+    str = str.replace(/\n\n/g, "\n");
+
+    // detect bold text that comes in the form of *my text* and inject &lt;b&gt; tags
+    let boldStringRegex = /\*.*\*/gi;
+    let boldStringMatches = str.match(boldStringRegex);
+    if (boldStringMatches) {
+      for (let boldString of boldStringMatches) {
+        let rawString = boldString.slice(1, -1); // remove the first and last character. Ex: *my text* -> my text
+        str = str.replace(boldString, `&lt;b&gt;${rawString}&lt;/b&gt;`);
+      }
+    }
+
+    // detect links and add the &lt;a&gt; tag to them
+    let linkRegex = /(https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,})/gi;
+    let linkMatches = str.match(linkRegex);
+    if(linkMatches) {
+      for (let link of linkMatches) {
+        str = str.replace(link, `&lt;a target="_blank" href="${link}"&gt;${link}&lt;/a&gt;`);
+      }
+    }
+
+    // detect emails and add the &lt;a&gt; tag to them
+    let emailRegex = /([a-zA-Z0-9._+-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi;
+    let emailMatches = str.match(emailRegex);
+    if(emailMatches) {
+      for (let email of emailMatches) {
+        str = str.replace(email, `&lt;a href="mailto: ${email}"&gt;${email}&lt;/a&gt;`);
+      }
+    }
+
+    return str;
+  }
+  /*-----------------------------------------------------------*/
+}
+</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<!-- end snippets -->
