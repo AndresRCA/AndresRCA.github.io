@@ -273,7 +273,7 @@ h5 {
     padding-right: 3%;
 }
 
-#snippets h2 {
+#snippets h2:not(.markdown-body h2) {
     text-align: center;
     margin-bottom: 30px;
 }
