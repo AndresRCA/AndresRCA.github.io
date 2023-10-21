@@ -320,10 +320,20 @@ h5 {
     padding-bottom: 30px;
 }
 
+#portfolio .project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #portfolio .portfolio-thumb {
     overflow: hidden;
     position: relative;
     margin-bottom: 30px;
+}
+
+#portfolio .portfolio-thumb img {
+    max-height: 370px;
 }
 
 #portfolio .portfolio-thumb .portfolio-overlay {
