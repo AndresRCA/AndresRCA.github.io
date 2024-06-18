@@ -1,246 +1,2518 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>AndresRCA</title>
-	<link rel="stylesheet" href="./css/icons.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="./css/style.css">
-	<!-- https://github.com/jlmakes/scrollreveal -->
-	<script src="https://unpkg.com/scrollreveal@3.4.0/dist/scrollreveal.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/swipe/2.0.0/swipe.min.js"></script>
-	<script>
-		window.sr = ScrollReveal();
-		// Add class to <html> if ScrollReveal is supported
-		if (sr.isSupported()) {
-		document.documentElement.classList.add('sr');
-		}
-	</script>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<!-- bootstrap v3.3.4 -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- font-awesome -->
+	<script src="https://kit.fontawesome.com/1c24a8e905.js" crossorigin="anonymous"></script>
+	<!-- google font -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+	<!-- docSlider -->
+	<link rel="stylesheet" href="css/docSlider.css">
+	<!-- animate.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- hightlight.js -->
+	<link rel="stylesheet" href="css/vs2015.min.css">
+	<script src="js/highlight.min.js"></script>
+	<!-- custom -->
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.3.0/github-markdown-dark.min.css" integrity="sha512-Cucyy1VsVrQdCoemlbCfzHU5k4KWnBRwc8ozzmHNcl7MGTOwxKPJOnkSqECyfhSggXT0Fn4bpqWZp3Dk5O7Cgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<style>
-		/* Ensure elements load hidden before ScrollReveal runs */
-		.sr .reveal { visibility: hidden; }
-		/*Swipe.js styles*/
-		.swipe {
-			overflow: hidden;
-			visibility: hidden;
-			position: relative;
+		.markdown-body {
+			font-weight: 100;
+			box-sizing: border-box;
+			min-width: 200px;
+			max-width: 980px;
+			margin: 0 auto;
+			padding: 45px;
 		}
-		.swipe-wrap {
-			overflow: hidden;
-			position: relative;
-		}
-		.swipe-wrap > a {
-			float:left;
-			width:100%;
-			position: relative;
+	
+		@media (max-width: 767px) {
+			.markdown-body {
+				padding: 15px;
+			}
 		}
 	</style>
 </head>
-<body class="sr">
-	<header class="hero is-header is-dark is-medium shadow">
-		<div class="hero-body">
-			<h1 class="title">Andres Castillo</h1>
-			<h2 class="subtitle">Full Stack Developer</h2>
-			<div class="social-media">
-				<a href="https://github.com/AndresRCA" class="media-item">
-					<span class="icon is-size-1"><i class="fa fa-github"></i></span>
-				</a>
-				<a href="https://www.linkedin.com/in/andres-castillo-439bb3124/" class="media-item">
-					<span class="icon is-medium is-size-4"><i class="fa fa-linkedin"></i></span>
-				</a>
-			</div>
-		</div>
-	</header>
-	<main>
-		<section class="section brick-wall">
-			<div class="container has-text-centered content">
-				<h1>Who am I?<span class="icon-guy-question" style="font-size: 3.5rem"></span></h1>
-				<p>
-					My name is Andres Castillo and I'm a telecommunications engineering graduate, aside from that I'm also an avid learner of web development and the various aspects of it, if you ask me to make a website I will do my best to think about every single small detail concerning the design and also use at the same time the best tool needed to provide dynamic web pages.
-				</p>
-			</div>
-		</section>
-		<div class="hero is-dark is-bold gold-top shadow">
+
+<body>
+	<div class="docSlider">
+
+		<!-- start home -->
+		<section id="home">
 			<div class="container">
-				<div class="hero-head has-text-centered">
-					<h2 class="title no-margin-bottom" style="margin-top: 40px"><span class="icon"><i class="fa fa-wrench"></i></span>&nbsp;&nbsp;What tools do I use? <span class="icon-guy-down" style="position: relative; top: 50px; z-index: 2; font-size: 5rem"></span></h2>
-					<hr id="guy-bar">
-				</div>
-				<div class="hero-body tools">
-					<h3 class="subtitle is-4 has-text-centered-mobile"><span class="icon is-medium"><i class="fa fa-laptop" style="font-size: 2rem"></i></span><span class="icon is-medium"><i class="fa fa-mobile" style="font-size: 2rem"></i></span>Front end tools</h3>
-					<div class="columns is-multiline">
-						<article class="column is-3 tool reveal">
-							<div class="level">
-								<div class="tool-header" style="background-image: url('./images/VueJs.jpeg');"></div>
-								<a href="https://vuejs.org/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
-							</div>
-						</article>
-						<article class="column is-3 tool reveal">
-							<div class="level">
-								<div class="tool-header" style="background-image: url('./images/reactLogo.png');"></div>
-								<a href="https://reactjs.org/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
-							</div>
-						</article>
-						<article class="column is-3 tool reveal">
-							<div class="level">
-								<div class="tool-header" style="background-image: url('./images/typescriptLogo.png');"></div>
-								<a href="https://www.typescriptlang.org/" class="level-item" style="color: #333"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
-							</div>
-						</article>
-						<article class="column is-3 tool reveal">
-							<div class="level">
-								<div class="tool-header" style="background-image: url('./images/webpackLogo.png');"></div>
-								<a href="https://webpack.js.org/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
-							</div>
-						</article>
-						<article class="column is-3 tool reveal">
-							<div class="level">
-								<div class="tool-header" style="background-image: url('./images/bulmaCSS.png');"></div>
-								<a href="https://bulma.io/" class="level-item" style="color: #333"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
-							</div>
-						</article>
-						<article class="column is-3 tool reveal">
-							<div class="level">
-								<div class="tool-header" style="background-image: url('./images/Bootstrap.png');"></div>
-								<a href="https://getbootstrap.com/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
-							</div>
-						</article>
-						<article class="column is-3 tool reveal">
-							<div class="level">
-								<div class="tool-header" style="background-image: url('./images/sassLogo.jpg');"></div>
-								<a href="https://sass-lang.com/" class="level-item" style="color: #333"><span class="icon"><i class="fa fa-search"></i></span>Find out more!</a>
-							</div>
-						</article>
-						<article id="other" class="column is-3 tool reveal">
-							<div class="level">
-								<div class="tool-header" style="background-color: white"></div>
-								<a href="#" style="color: #333" class="level-item"><span class="icon"><i class="fa fa-book"></i></span>&nbsp;Other...</a>
-							</div>
-						</article>
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8 animate invisible" data-animation="fadeIn" data-animation-delay="0.9s" data-animation-duration="1.4s">
+						<h3>Welcome to My Portfolio</h3>
+						<h1 class="animate invisible" data-animation="fadeIn" data-animation-delay="1.5s" data-animation-duration="1.8s">Andrés R. Castillo Aguilar</h1>
+						<h2 class="rotate">TELECOMUNNICATIONS ENGINEER, FULLSTACK DEVELOPER, PROFESSIONAL</h2>
+						<p style="color: #b9b9b9;">I build practical solutions, for real use cases, and often for my convenience.</p>
+						<a href="#work" class="btn btn-default animate invisible" data-animation="fadeInUp" data-animation-delay="1s">What I do</a>
 					</div>
-					<h3 class="subtitle is-4 has-text-centered-mobile"><span class="icon"><i class="fa fa-server"></i></span> Back end tools</h3>
-					<article style="margin-bottom: 15px;" class="is-full tool reveal">
-						<div class="level">
-							<div class="tool-header" style="background-image: url('./images/node.js-logo.png');"></div>
-							<a href="https://nodejs.org/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>&nbsp;Find out more!</a>
-					</article>
-					<article style="margin-bottom: 15px;" class="is-full tool reveal">
-						<div class="level">
-							<div class="tool-header" style="background-image: url('./images/Django.png');"></div>
-							<a href="https://www.djangoproject.com/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>&nbsp;Find out more!</a>
-					</article>
-					<article class="is-full tool reveal">
-						<div class="level">
-							<div class="tool-header" style="background-image: url('./images/laravel-banner.jpg');"></div>
-							<a href="https://laravel.com/" class="level-item"><span class="icon"><i class="fa fa-search"></i></span>&nbsp;Find out more!</a>
-						</div>
-					</article>
+					<div class="col-md-2"></div>
 				</div>
-			</div>
-		</div>
-		<section class="section brick-wall">
-			<div class="container content">
-				<h1><span class="icon-guy-waving" style="font-size: 3.5rem; position: relative; top: 3px;"></span>Wanna check out my work?</h1>
-				<p>
-					I believe that bigger projects lead to better results, of course development time gets longer but the end product will certainly be amazing, as <b>Shigeru Miyamoto</b> once said:
-				</p>
-				<blockquote>
-					“A delayed game is eventually good, a bad game is bad forever.”
-					<footer>- Shigeru Miyamoto</footer>
-				</blockquote>
-				<p>This is mostly a joke by the way, but the feeling is there.</p>
 			</div>
 		</section>
-		<div class="hero is-dark interesting-top projects" style="background-image: url('./backgrounds/food.png')">
-			<div class="hero-body">
-				<h1 class="title is-2">Check out this all-around website</h1>
-				<h2 class="subtitle is-3">It's very nice <span class="icon-guy-resting" style="position: relative; top: 5px"></span></h2>
-				<div id="Swipe" class="swipe is-pulled-right" style="width: 60%">
-					<div class="swipe-wrap">
-						<a href="https://github.com/AndresRCA/Vue-project/tree/master" class="project-image">
-							<img src="./images/vue-project-Home.png" alt="Vue-project image" class="image">
-						</a>
-						<a href="https://github.com/AndresRCA/Vue-project/tree/master" class="project-image">
-							<img src="./images/vue-project-Cooking.png" alt="Vue-project image" class="image">
-						</a>
-						<a href="https://github.com/AndresRCA/Vue-project/tree/master" class="project-image">
-							<img src="./images/vue-project-Videogames.png" alt="Vue-project image" class="image">
-						</a>
-						<a href="https://github.com/AndresRCA/Vue-project/tree/master" class="project-image">
-							<img src="./images/vue-project-Programming.png" alt="Vue-project image" class="image">
-						</a>
-					</div>
-				</div>	
-				<div class="content">
-					<p>
-						The technologies I used for this project were <em>so many</em> at the time, I first initialized this project when I started learning Vue.js, now that I think about it, finishing this project without it would've been pretty hard for the beginner me.
-					</p>
-					<p>
-						This was actually my first website that contained various views so mind the rough look (what with the plain color usage, lack of images and whatnot), I named the views as <b>"Home"</b>, <b>"Cooking"</b>, <b>"Video Games"</b> and <b>"Programming"</b>, every one of them was called after things I like very much, except <b>"Home"</b> obviously, that's just the root of the site. The <b>"Cooking"</b> and <b>"Programming"</b> section take their looks from mostly blogs, specially the <b>"Programming"</b> one, it's designed to display useful information in a readable format accesible to all browsers and viewports, the cooking section is designed to display many awesome recipes in a creative list where the items resemble hamburgers while still keeping harmony with the color profile of the section itself.
-					</p>
-				</div>
-			</div>
-		</div>
-		<aside class="no-margin-bottom content has-text-centered"></aside>
-		<div class="hero is-deep">
-			<div class="hero-body" style="min-height: 200px">
-				<div>
-					<h1 class="title is-centered">Probabilites Generator</h1>
-					<h2 class="subtitle is-centered">
-						A dynamic way to input combinatory aleatory experiments data and get the result of the experiment through a special algorithm I made
-					</h2>
-					<div class="columns projects">
-						<div class="column is-6">
-							<a href="https://codepen.io/AndresRCA/pen/WKreqg" class="project-image">
-								<img style="border: 1px solid #ffffff4d" src="./images/Prob1.png" alt="probabilities" class="image">
-							</a>
-						</div>
-						<div class="column is-6">
-							<a href="https://codepen.io/AndresRCA/pen/WKreqg" class="project-image">
-								<img style="border: 1px solid #ffffff4d" src="./images/Prob2.png" alt="probabilities" class="image">
-							</a>
-						</div>
+		<!-- end home -->
+
+		<!-- start work -->
+		<section id="work" class="custom-scrollbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 animate" data-animation="bounce">
+						<h2>WHAT I DO</h2>
 					</div>
 				</div>
-				<div class="content">
-					<p>
-						This is something I made when I was learning about probability at my university, it's basically a simulation of the "balls in a box" scenario, the user can add as many balls that he wants inside a box, and can calculate the probability of a certain event.
-					</p>
-					<p>
-						This project uses Vue.js and Plotly.js which is used for graphing data in a variety of ways. For the style I just went with plain Bulma CSS.
-					</p>
+
+				<div class="row">
+					<div class="col-md-4 col-xs-11">
+						<div class="media animate invisible" data-animation="fadeInUp" data-animation-delay="0.6s">
+							<div class="media-object media-left">
+								<i class="fa fa-cog"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Maintainable Platforms</h3>
+								<p>When collaborating with a team, I prioritize alignment with existing development standards. If I notice established practices, I willingly adapt my approach to maintain consistency in the codebase. This ensures readability and ease of navigation. But I will voice my opinion if there's room for improvement.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-xs-11">
+						<div class="media animate invisible" data-animation="fadeInUp" data-animation-delay="0.6s">
+							<div class="media-object media-left">
+								<i class="fa fa-bug"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Testing and Stability</h3>
+								<p>I prioritize creating stable, reliable, and understandable code. I prefer a test-driven development approach but recognize project requirements can change at times, in turn rendering some tests unnecessary. In order to avoid unnecessary rewrites and changes due to misunderstandings, effective communication is a key factor.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-xs-11">
+						<div class="media animate invisible" data-animation="fadeInUp" data-animation-delay="0.6s">
+							<div class="media-object media-left">
+								<i class="fa fa-hands-helping"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Collaborative and patient</h3>
+								<p>I believe in fostering open communication and collaboration with colleagues. When working with those who may be resistant to feedback, I approach the situation with patience and persistence. I aim to build trust over time by finding common ground and ensuring that it’s acceptable to be open and honest. Transparency is my guiding principle in all interactions.</p>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
-		</div>
-	</main>
-	<!-- element reveals + carousel implementation -->
-	<script>
-		window.sr = ScrollReveal({
-			scale: 0.7,
-			rotate: {x: 70, y: 30, z: 0}
-		});
-		var tools = document.querySelectorAll('.tool');
-		if (window.innerWidth <= 768) { //if viewport is mobile just reveal items in a normal fashion
-			sr.reveal(tools);
-		}
-		else {
-			var rows = Array.prototype.slice.call(tools);
-			var first_row = rows.splice(0, 4); //I take the [0], [1], [2], [3]
-			var second_row = rows.splice(0, 4); //I take the new [0], [1], [2], [3]
-			var third_row = rows.splice(0); //I take the last one, [0], [1], [2]
+		</section>
+		<!-- end work -->
 
-			sr.reveal(first_row, 450); //a delay for a nice effect in the same row
-			sr.reveal(second_row, 450);
-			sr.reveal(third_row, 450);
-		}
+		<!-- start about -->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-xs-11 animate invisible" data-animation="fadeInLeft" data-animation-delay="0.2s">
+						<h2>ABOUT ME</h2>
+						<h4>CAUTIOUS &AMP; CRITICAL THINKER</h4>
+						<p>I consider myself to be a highly adaptable and fast learner in general, with a strong passion for self-improvement and utilizing modern tools that make daily life easier. I always strive to pay exceptional attention to detail and am eager to tackle any practical problem. I believe that through thorough planning and utilizing a diverse set of skills and knowledge, success can be achieved in any field.</p>
+						<b>This is a list of some hard and soft skills, and my affinity for them. Factors such as interest in the field, confidence, and practical experience are taken into account when defining my score in them, so do take it with a <b>grain of salt</b>. For more details, make sure to check my CV.</p>
+					</div>
+					<div class="col-md-6 col-xs-11">
+						<div class="animate invisible" data-animation="fadeInUp" data-animation-delay="0.8s" data-animation-duration="0.5s">
+							<span class="text-top">Backend Development <small>92%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="96" aria-valuemin="0"
+									aria-valuemax="100" style="width: 92%;"></div>
+							</div>
+						</div>
+						<div class="animate invisible" data-animation="fadeInUp" data-animation-delay="1s" data-animation-duration="0.5s">
+							<span>Frontend Development<small>90%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="93" aria-valuemin="0"
+									aria-valuemax="100" style="width: 90%;"></div>
+							</div>
+						</div>
+						<div class="animate invisible" data-animation="fadeInUp" data-animation-delay="1.2s" data-animation-duration="0.5s">
+							<span>Arquitecture design <small>84%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="84" aria-valuemin="0"
+									aria-valuemax="100" style="width: 84%;"></div>
+							</div>
+						</div>
+						<div class="animate invisible" data-animation="fadeInUp" data-animation-delay="1.4s" data-animation-duration="0.5s">
+							<span>Databases <small>80%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+									aria-valuemax="100" style="width: 80%;"></div>
+							</div>
+						</div>
+						<div class="animate invisible" data-animation="fadeInUp" data-animation-delay="1.6s" data-animation-duration="0.5s">
+							<span>Mobile Apps <small>75%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+									aria-valuemax="100" style="width: 75%;"></div>
+							</div>
+						</div>
+						<div class="animate invisible" data-animation="fadeInUp" data-animation-delay="1.8s" data-animation-duration="0.5s">
+							<span>Automatization <small>96%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="88" aria-valuemin="0"
+									aria-valuemax="100" style="width: 96%;"></div>
+							</div>
+						</div>
+						<div class="animate invisible" data-animation="fadeInUp" data-animation-delay="2s" data-animation-duration="0.5s">
+							<span>Careful Planning <small>98%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="98" aria-valuemin="0"
+									aria-valuemax="100" style="width: 98%;"></div>
+							</div>
+						</div>
+						<div class="animate invisible" data-animation="fadeInUp" data-animation-delay="2.2s" data-animation-duration="0.5s">
+							<span>Documenting and Development Policies Enjoyer <small>100%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+									aria-valuemax="100" style="width: 100%;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end about -->
 
-		//carousel for element with id of 'Swipe'
-		window.mySwipe = Swipe(document.getElementById('Swipe'), {
-			auto: 4000,
-			speed: 800,
-			continuous: true
-		});
-	</script>
+		<!-- start snippets -->
+		<section id="snippets">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 bounce">
+						<h2>CODE SNIPPETS</h2>
+					</div>
+				</div>
+
+				<p style="margin-bottom: 20px;">In no particular order of experience here is a sample of some code and documentation I've worked on in the past.<br><small>In some cases asking your LLM of preference about what the code does can give you great results in summaries too!.</small></p>
+
+				<!-- Model for a form control -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-custom">
+								<div class="panel-heading" role="tab" id="exampleOne">
+									<h4 class="panel-title">
+										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseExampleOne" aria-expanded="false" aria-controls="collapseOne">
+											Model for a form control
+										</a>
+									</h4>
+								</div>
+								<div id="collapseExampleOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exampleOne">
+									<div class="panel-body">
+										<pre><code class="language-typescript">
+// IFormControl.interface.ts
+export interface IFormControl {
+  id: number;
+  description: string | null;
+  /**
+   * order for the control (1 would mean it's the first element in the form)
+   */
+  order: number;
+  styleRules?: IStyleRules;
+  control: IControl;
+  /**
+   * name of function called in the backend used to retrieve the data for the control object
+   */
+  dataSource: string | null;
+}
+
+// IControl.interface.ts
+export interface IControl&lt;T = any&gt; {
+  name: string;
+  tag?: 'input' | 'select' | 'textarea' | 'button';
+  label?: string;
+  /**
+   * the text to show inside a button when tag is 'button'
+   */
+  content?: string;
+  attributes?: {
+    type?: 'text' | 'radio' | 'checkbox' | 'number' | 'tel' | 'date' | 'email' | 'url' | 'search' | 'password';
+    placeholder?: string;
+    /**
+     * regex pattern as a string
+     */
+    pattern?: '[0-9]*' | '[0-9]{3}-[0-9]{7}';
+    required?: true;
+    disabled?: true;
+    /**
+     * the default value to place in a control, for example an input that's already filled out
+     */
+    value?: string | number | boolean | Object;
+    minLength?: number;
+    maxLength?: number;
+    min?: number;
+    max?: number;
+  },
+  /**
+   * refers to these validators: https://angular.io/api/forms/Validators#validators
+   */
+  validators?: Array&lt;'required' | 'requiredTrue' | 'minLength' | 'maxLength' | 'min' | 'max' | 'pattern' | 'email' | 'nullValidator' | 'compose' | 'composeAsync'&gt;;
+  /**
+   * data to fill the form control
+   */
+  data?: Array&lt;T&gt;;
+  /**
+   * method to execute (in the case of a button)
+   */
+  action?: string;
+  /**
+   * must be the name of a form control (this is for external controls that execute actions and fill another control)
+   */
+  fills?: string;
+  /**
+   * the name of the group the control belongs to.
+   */
+  group?: string;
+  /**
+   * button that appears to the right side of the control
+   */
+  buttonGroup?: 'add' | 'search';
+  /**
+   * button that appears to the left side of the control, usually used to specify units (like USD, BS, etc)
+   */
+  buttonLabel?: {
+    icon?: string;
+    content?: string;
+  }
+}</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Component for form generation using json value -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-custom">
+								<div class="panel-heading" role="tab" id="exampleTwo">
+									<h4 class="panel-title">
+										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseExampleTwo" aria-expanded="false" aria-controls="collapseOne">
+											Component for form generation using json value
+										</a>
+									</h4>
+								</div>
+								<div id="collapseExampleTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exampleTwo">
+									<div class="panel-body">
+<pre><code class="language-typescript">import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { IControl } from './interfaces/IControl.interface';
+import { IJsonForm } from './interfaces/IJsonForm.interface';
+import { IJsonFormGroup } from './interfaces/IJsonFormGroup.interface';
+import { FormInteractionService } from 'src/app/core/services/form-interaction.service';
+
+/**
+ * This component creates a form in a certain format, all it needs is a IJsonForm object.
+ */
+@Component({
+  selector: 'app-json-form',
+  templateUrl: './json-form.component.html',
+  styleUrls: ['./json-form.component.scss']
+})
+export class JsonFormComponent implements OnInit {
+  /**
+   * Form coming from the backend
+   */
+  @Input() jsonForm!: IJsonForm;
+
+  /**
+   * Angular reactive form
+   */
+  public form!: FormGroup;
+  /**
+   * When the user wants to clear the form, this object stores the initial values
+   */
+  public formInitialValues: any;
+
+  constructor(
+    private fb: FormBuilder,
+    private formInteractionService: FormInteractionService
+  ) { }
+
+  /**
+   * Initialize form groups from the given jsonForm format
+   */
+  ngOnInit(): void {
+    let formGroups: any = {}
+    for (let formGroup of this.jsonForm.formGroups) {
+      formGroups[formGroup.name!] = this.generateFormGroup(formGroup.formControls);
+    }
+    this.form = this.fb.group(formGroups);
+    this.formInitialValues = this.form.value;
+    // store the component so we can access its info on other components or services
+    this.formInteractionService.formComponents.push(this);
+  }
+
+  /**
+   *
+   * @param name name used to identify the form group
+   * @returns
+   */
+  public getFormGroup(name: string): FormGroup {
+    return this.form.get(name) as FormGroup;
+  }
+
+  /**
+    * Generate and return a form group (or form array) given the controls defined by the json format
+    * @param jsonFormControls controls declared in json format
+    * @returns newly generated FormGroup
+    */
+  private generateFormGroup(jsonFormControls: IJsonFormGroup['formControls']): FormGroup {
+    let group: any = {};
+    for (let formControl of jsonFormControls) {
+      group[formControl.control.name] = this.generateControl(formControl.control);
+    }
+    return this.fb.group(group);
+  }
+
+  /**
+    * Generate and return a form control using an IControl
+    * @param control
+    * @returns newly generated FormControl
+    */
+  private generateControl(control: IControl): FormControl {
+    // create a control
+    let customValidators = this.generateValidators(control.validators, control.attributes);
+    let newControl = new FormControl(control.attributes?.value || null, customValidators);
+    // add attributes to control
+    if (control.attributes?.disabled) newControl.disable();
+    return newControl;
+  }
+
+  /**
+    * Generate an array of Validators
+    * @param validatorNames
+    * @returns empty array if validatorNames doesn't exist, otherwise an array of Validators
+    */
+  private generateValidators(validatorNames: IControl['validators'] = [], attributes: IControl['attributes']): ValidatorFn[] {
+    return validatorNames.map((validatorName) => {
+      switch (validatorName) {
+        case 'minLength':
+          return Validators.minLength(attributes!.minLength!);
+        case 'maxLength':
+          return Validators.maxLength(attributes!.maxLength!);
+        case 'min':
+          return Validators.min(attributes!.min!);
+        case 'max':
+          return Validators.max(attributes!.max!);
+        case 'pattern':
+          return Validators.pattern(attributes!.pattern!);
+        default:
+          // for validators that don't have an argument, just using the validatorName as a key is fine
+          return Validators[validatorName]
+      }
+    }) as ValidatorFn[];
+  }
+}</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- README.md for a SPA -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-custom">
+								<div class="panel-heading" role="tab" id="exampleThree">
+									<h4 class="panel-title">
+										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseExampleThree" aria-expanded="false" aria-controls="collapseOne">
+											README.md file for a SPA
+										</a>
+									</h4>
+								</div>
+								<div id="collapseExampleThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exampleThree">
+									<div class="panel-body">
+										<article class="markdown-body">
+											<h1>Frontend</h1>
+										
+											<p>This SPA dashboard project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a>
+												version 15.2.1.</p>
+										
+											<h2>Development policies (<b>IMPORTANT TO FOLLOW</b>)</h2>
+											<ul>
+												<li>File placement: Placement of files that serve a certain function should be placed in accordance with the <a
+														href="#folder-structure">Folder structure</a> explanation on folders.</li>
+												<li>File naming (and other types of naming): This project generally follows the rules proposed by angular themselves
+													<a href="https://angular.io/guide/styleguide#naming">here</a>, so <b>please</b> do give the guidelines a glance,
+													there's reasons for why following a convention and keeping consistency does great work for the team, a few reasons
+													described in the aforementioned document go like this:
+													<ul>
+														<li><strong>Naming conventions help provide a consistent way to find content at a glance. Consistency within the
+																project is vital. Consistency with a team is important. Consistency across a company provides tremendous
+																efficiency.</strong></li>
+														<li><strong>The naming conventions should help find desired code faster and make it easier to
+																understand.</strong></li>
+													</ul>
+												</li>
+												<li>A notable rule that is often ignored would be <a
+														href="https://angular.io/guide/styleguide#separate-file-names-with-dots-and-dashes">Separate file names with
+														dots and dashes</a>. So <b>please</b> let's maintain consistency and keep our codebase healthy. Having said that
+													there may be some room for exceptions or particular cases where I'd have deem worth doing differently, one example
+													and hopefully the only one is the creation of <b>interfaces</b>, an interface file would usually be created as
+													`user.interface.ts`, however for interfaces I prefer to add the prefix "I" before the name of the entity/model to
+													easily identify in code what is an `Interface` and what is a `Class`, and name the files the same as the
+													interface, resulting in `IUser.interface.ts` rather than `i-user.interface.ts` or `user.interface.ts`. This might
+													be unnecessary but the result goes in line with the "<strong>The naming conventions should help find desired code
+														faster and make it easier to understand.</strong>" point that was brought up.</li>
+												<li>Naming convention for code: camelCase.</li>
+												<li>The use of <strong>Route Guards</strong> and <strong>Resolvers</strong> is a must if a route contains any sort
+													of data that is either fetched or passed on by some mean, such as a query url parameter, regular parameter, or
+													from an API.</li>
+												<li><strong>Route Guards</strong> and <strong>Resolvers</strong> should be contained in their own scope, for example
+													a <strong>Guard</strong> that is used globally in different components should be defined in
+													<code>src/app/guards/</code>, while the ones that are used exclusively by a component should be defined within
+													their own directory, let's say <code>src/app/components/card-viewer/</code> as an example.</li>
+												<li>The last point does not only apply to <strong>Guards</strong> and <strong>Resolvers</strong>, interfaces,
+													services, and such other files should follow the same rule.</li>
+												<li>Pull requests are encouraged, and quality checking is a must. A codebase is a thing that extends as time goes
+													on, let's keep it healthy.</li>
+											</ul>
+										
+											<h2>Key dependencies (prone to change or more likely to break your project)</h2>
+											<h3>NPM dependencies</h3>
+											<ul>
+												<li>jQuery v2.1.4.</li>
+												<li>bootstrap.bundle.js v4.0.0 (IMPORTANT: bootstrap.css is v4.0.0-beta and it is defined inside shamcey.css!!!).
+												</li>
+											</ul>
+										
+											<h3>Local dependencies <code>assets/lib</code></h3>
+											<ul>
+												<li>ionicons v2.0.0 (css and fonts).</li>
+												<li>shamcey.css (contains bootstrap.css v4.0.0-beta and custom template style rules).</li>
+											</ul>
+										
+											<h2>NPM scripts</h2>
+<pre><code class="language-bash"># run in development mode
+$ npm run start
+
+# run in production mode
+$ npm run start:prod
+
+# build (The build artifacts will be stored in dist/)
+$ npm run build
+
+# build as you develop
+$ npm run watch
+
+# test execute the unit tests via Karma
+$ npm run test</code></pre>
+											<h2>Project's layout</h2>
+											<img src="images/adminISP.png" alt="AdminISP" style="margin-bottom: 20px;">
+										
+											<p>Let's explain in detail what we're seeing here, first of all we have our root App, this App has a routing module
+												from which you get routes like <code>/error</code>, <code>/signup</code>, <code>/signin</code> and finally
+												<code>/dashboard</code> which is a path in our <code>app-routing.module</code> that has children routes, under this
+												route we encounter our layout components that makes up our view, the important ones are <code>side-menu</code> and
+												<code>page-body</code>.</p>
+										
+											<ul>
+												<li><code>side-menu</code>: Holds the router links for our dashboard modules or user modules, these modules, such as
+													registering a new user to our service, search for users and payment methods, and so forth.</li>
+												<li><code>pagebody</code>: Container that holds our <code>&lt;router-outlet&gt;</code> for our
+													<code>dashboard.module</code>, it's the place where we show the content of our modules, and these modules contain
+													something I call "content blocks", these content blocks ideally should be a dynamic component that returns the
+													component that matches the type of content block the module defines.</li>
+											</ul>
+											<p><code>ContentBlockComponent</code> doesn't exist but it is used as a placeholder name for components that should
+												take the place as content, for example a <code>JsonFormComponent</code>, <code>ActionButtonsComponent</code>,
+												<code>FilterFormComponent</code>, etc.</p>
+										
+											<h3>Folder structure</h3>
+<pre><code class="language-bash">AdminISP
+├── docs
+└── src
+    ├── abstract-classes
+    ├── app
+    │   ├── core
+    │   │   └── services
+    │   ├── guards
+    │   ├── pages
+    │   │   ├── dashboard
+    │   │   │   ├── components
+    │   │   │   └── layout
+    │   │   │       ├── breadcrumb
+    │   │   │       ├── footer
+    │   │   │       ├── headpanel
+    │   │   │       ├── mainpanel
+    │   │   │       ├── pagebody
+    │   │   │       ├── pagetitle
+    │   │   │       └── side-menu
+    │   │   ├── error
+    │   │   ├── signin
+    │   │   └── signup
+    │   ├── services
+    │   └── shared
+    ├── assets
+    │   ├── css
+    │   ├── img
+    │   └── lib
+    ├── utils
+    ├── mock-data
+    ├── environments
+    └── shared-interfaces</code></pre>
+											<p>This folder structure may or may not be outdated. For accuracy please do check the current project's folders on
+												this repository.</p>
+											<ul>
+												<li><code>abstract-classes</code>: Folder where we define abstract classes that should help enforce business logic
+													and policies/rules within components.</li>
+												<li><code>app/pages</code>: As the name suggests it holds the pages for our <code>app-routing.module</code> routes,
+													inside of it we have our <code>dashboard</code> folder that in itself also has its own routing module.</li>
+												<li><code>dashboard/components</code>: There should be no need for an explanation but this is where we store our
+													components used within the dashboard, and most importantly, the <code>ModuleViewComponent</code> in which our
+													modules content lives (<code>ModuleViewComponent</code> is set as the component when defining routes for modules
+													on app startup).</li>
+												<li><code>dashboard/layouts</code>: It's a folder whose purpose is to clean our templates and give more meaning
+													through naming elements that makes up our application.</li>
+												<li><code>core</code>: Folder where singleton services are defined and used across all components.</li>
+												<li><code>shared</code>: Folder where shared components are defined, the difference from <code>layouts</code> is
+													that <code>shared</code> should contain small-scale components, such like buttons, modals, form elements, etc...
+												</li>
+												<li><code>shared-interfaces</code>: Global interfaces that don't necessarily represent a model/entity from the
+													backend and are often used in different places.</li>
+												<li><code>assets/lib</code>: Is the place where dependencies that couldn't be found using package managers end up.
+												</li>
+												<li><code>mock-data</code>: In cases when we're not getting any data from the backend just yet, we store files here
+													that work as mock data to simulate responses, best case use is to define an async function that returns the mock
+													data and in our application instead of fetching using http, we call the function to get the data asynchronously.
+												</li>
+												<li><code>utils</code>: Commonly used functions or logic that takes up a lot of lines of code that would otherwise
+													mess with the readability of a component are stored in this folder. Do <b>not</b> insert component state or service
+													logic in the functions defined here, only rudimentary functions are allowed.</li>
+											</ul>
+										
+											<h2>Modules and routing</h2>
+											<p>Modules refer to a section that make up our content, it is given to the client via a call to the backend and is
+												tailored to each user. We use these modules to build our routing system, here's a basic route object that should be
+												defined for each module that <b>possesses</b> content to display:</p>
+												
+<pre><code class="language-typescript">{
+  path: module.route,
+  component: ModuleViewComponent,
+  title: `Admin ISP - ${module.name}`,
+  data: { module }, // pass the module (holds info about how to retrieve module data and what children or parent modules they have)
+  resolve: { // resolver used to fetch data before switching routes
+    contentBlocks: moduleViewResolver
+  }
+}</code></pre>
+											<p>These route objects are defined in the <code>ConfigurationService</code> service, the resolver
+												<code>moduleViewResolver</code> we use is in charge of fetching the content for a module when there is a change in
+												the route, if the fetching fails then the route won't activate. Think of the <code>moduleViewResolver</code> as a
+												guard or middleware that accepts or rejects the change of route, but that also fetches the data to show within it.
+											</p>
+										
+											<h3>DashboardModulesService</h3>
+											<p>This service is responsible for storing the context of our application when traversing between modules within the
+												dashboard, it stores data necessary across components that display the current module's info. It stores as well the
+												entirety of the user's modules (array of modules). This service is vital for the next topic we'll be covering
+												"<strong>Route based context</strong>".</p>
+										
+											<h3>Route based context</h3>
+											<p>On dashboard startup and on route change within the dashboard (dashboard children routes), we subscribe to changes
+												on the currently selected module <code>currentModule</code> in <code>DashboardModulesService</code>.
+												<code>currentModule</code> should be updated inside resolver such as <code>moduleViewResolver</code> after a
+												successful change of route and guards for routes that change the context.</p>
+										
+											<h3>Exception handling and redirection</h3>
+											<p><strong>VERY IMPORTANT</strong>, There is a service under <code>core/services</code> called
+												<code>error-handler.service.ts</code> that we'll be using a lot to handle different types of status codes that our
+												backend can return. This service is what should be used whenever redirection is needed or any sort of error handling
+												regarding data from the API.</p>
+											<p>For example if a resolver doesn't manage to fetch the data it needs for the next route, we would use this service
+												to redirect the user to a page that indicates the error that occurred.</p>
+										
+											<h3>Security</h3>
+											<p>There is a service called <code>EncryptionService</code> which handles aspects of security throughout the
+												application, one of those aspects is passing query parameters between routes in an encrypted manner. To do this the
+												developer must be aware of the functions that handle these situations and use them accordingly. An example would
+												look like this:</p>
+<pre><code class="language-typescript">// encryption (sending side)
+const module = this.encryptionService.encryptRouteParameter(this.module);
+this.router.navigate(['/dashboard/modules'], { queryParams: { module } });
+
+// decryption (receiving side)
+ngOnInit() {
+  const ciphertext = this.route.snapshot.queryParamMap.get('module')!;
+  let decryptedData = this.encryptionService.decryptRouteParameter&lt;IModule&gt;(ciphertext);
+  this.modules = decryptedData.childrenModules;
+}</code></pre>
+											<p>There is only a need for encryption for data that is sensitive or data that comes in the form of an Object or
+												Array.</p>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- README.md for a NestJS backend -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-custom">
+								<div class="panel-heading" role="tab" id="exampleFour">
+									<h4 class="panel-title">
+										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseExampleFour" aria-expanded="false" aria-controls="collapseOne">
+											README.md for a NestJS backend
+										</a>
+									</h4>
+								</div>
+								<div id="collapseExampleFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exampleFour">
+									<div class="panel-body">
+										<article class="markdown-body">
+											<h1>AdminISP Backend</h1>
+											
+											<p>This is a backend for the AdminISP platform, built with NestJS (bootstrapped using Fastify).</p>
+											
+											<h2>Installation</h2>
+											
+											<p>This project was built with <code>Node v16.18.0 LTS</code>, so keep that in mind as you host this backend on a
+												server. The following are steps to take in order to have a functioning application:</p>
+											
+											<ol>
+												<li>Run <code>npm install</code> to install all dependencies.</li>
+												<li>Remove the <code>.example</code> suffix from the <code>.env</code> files and add the proper values to each
+													variable.
+													<blockquote>If you don't want to delete <code>.env.development.example</code>, <code>.env.production.example</code>
+														files and alter git's history, copy them and rename the copies without the <code>.example</code> suffix.
+													</blockquote>
+												</li>
+												<li>Run <code>npm run start</code>, and you should have your service up and running. To serve your SPA, make sure to
+													place it inside the <code>public/</code> folder.
+													<blockquote>Your frontend should be responsible for building and placing the contents of your SPA inside the
+														<code>public/</code> folder. In the case of a frontend using the angular CLI, we can do this by changing the value
+														defined in the <code>"outputPath"</code> option inside the <code>angular.json</code> file.</blockquote>
+												</li>
+											</ol>
+											
+											<h2>Security</h2>
+											
+											<p>This backend possesses all sorts of security measures against dangers such as DoS (Denial of Service), DDoS
+												(Distributed Denial of Service), XSS (Cross Site Scripting), open endpoints, lack of authentication, and other such
+												cases. The following is a list of enabled tools (libraries and security aspects):</p>
+											
+											<ul>
+												<li>helmet ✅</li>
+												<li>CORS ✅</li>
+												<li>Signed cookies ✅</li>
+												<li>Throttler ✅</li>
+												<li>Passport ✅
+													<ul>
+														<li>API Key Authorization Strategy ✅</li>
+														<li>Local Authorization Strategy ✅</li>
+													</ul>
+												</li>
+												<li>Request Body Validation ✅
+													<ul>
+														<li>Automatic pipe validation ✅</li>
+														<li>class-validator ✅</li>
+														<li>PickType(), OmitType() ✅</li>
+														<li>Safe query-based resource lookup: ✅
+															<blockquote>This is OK: <code>/forms?name=my%20form</code> ✔️<br>
+																This is not OK: <code>/forms?createdAt=2015-03-23-09.41.24.684842</code> ❌</blockquote>
+														</li>
+													</ul>
+												</li>
+											</ul>
+											
+											<blockquote><strong>IMPORTANT:</strong> To establish communication with some endpoints, the client MUST add to their
+												HTTP request headers the header <code>X-API-Key</code>, and the value should also be the same as the one defined in
+												the <code>.env</code> files; otherwise, the request WILL be rejected with a 401 status code.</blockquote>
+											
+											<h3>Things to note</h3>
+											
+											<ul>
+												<li>Signed cookies:</li>
+												<ul>
+													<li><code>fastify-cookie</code> is used for parsing cookies.</li>
+													<li>Security is set in our <code>main.ts</code> file.</li>
+													<li>Cookies are signed by default.</li>
+													<li>The custom <code>@Cookies</code> decorator under the <code>src/decorators</code> folder is in charge of unsigning
+														the cookies, so you don't have to do it inside your controller.</li>
+												</ul>
+
+												<li>Local Authorization Strategy:</li>
+												<ul>
+													<li>Refers to a Guard that handles user login attempts (checks if username and password match, that sort of thing).</li>
+												</ul>
+											</ul>
+											
+											<h2>Configuration</h2>
+											
+											<p>Details about how this backend is configured, such as global validation pipes, swagger setup, hot module reloading,
+												configuration module/service, rate limiting, database connection, etc, should be found in <code>main.ts</code> and
+												<code>app.module.ts</code>.</p>
+											
+											<h2>NPM Scripts</h2>
+											
+											<h3>Running the app</h3>
+											
+<pre><code class="language-bash"># development
+$ npm run start
+
+# watch mode (development)
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod</code></pre>
+											
+											<h3>Test</h3>
+											
+<pre><code class="language-bash"># unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov</code></pre>
+											
+											<h2>Development Policies</h2>
+											
+											<p>If you'd like to collaborate on this project, there are some <strong>policies</strong> that should be followed:</p>
+											
+											<ol>
+												<li><strong>Naming convention for code:</strong> camelCase.</li>
+												<li><strong>Documentation</strong>: Currently, the way this project maintains its documentation is through the use of <a href="https://docs.nestjs.com/openapi/introduction">swagger</a> in NestJS. You can find documentation regarding API calls and their responses at the <code>/docs</code> route. If you're working on a new controller or expanding on an existing one, <strong>please</strong> follow the guide regarding <a href="https://docs.nestjs.com/openapi/introduction">swagger</a> in order to maintain a <strong>healthy codebase</strong> and <strong>collaborative environment</strong>.
+													<p>At the moment <code>/docs</code> is only created when <code>process.env.NODE_ENV !== 'production'</code>, so basically, it only exists for developers that work on this API, it's not meant to be public.</p>
+													<p>This is how the documented API and request would look like:</p>
+													<img src="images/apiDocs1.png" alt="AdminISP api docs 1">
+													<img src="images/apiDocs2.png" alt="AdminISP api docs 2" style="margin-bottom: 20px;">
+													<blockquote><strong>IMPORTANT:</strong> Requests that require an API key are protected, you can authorize all requests when clicking the lock on the top right corner of <code>/docs</code> and then entering your key value.</blockquote>
+													<p>Lastly, remember that whatever type you pass to the <code>@ApiResponse</code> decorator should always be reflected by what your route handler returns, like so:</p>
+<pre><code class="language-typescript">@Get('check-phrase/:message')
+@ApiOkResponse({ type: CheckPhraseResponse })
+checkPhrase(@Param('message') message: string): CheckPhraseResponse {
+  // ...
+  return { is_black_listed: msgIsProfane }
+}
+</code></pre>
+											</li>
+												<li><strong>Folder structure:</strong> Here is a breakdown of each subdirectory and what they should store.
+													<ul>
+														<li><strong>config:</strong> <a
+																href="https://docs.nestjs.com/techniques/configuration#custom-configuration-files">Custom configuration
+																files</a> used to define .env variables behavior and way of access.</li>
+														<li><strong>dto:</strong> Classes that are used in request body validations, as NestJS <a
+																href="https://docs.nestjs.com/techniques/validation#mapped-types">suggests</a>.</li>
+														<li><strong>responses (NestJS non-standard):</strong> Classes that are used for <a
+																href="https://docs.nestjs.com/openapi/operations#responses">documenting</a> and defining the type of response
+															a route should return. In order for swagger to detect these files that possess a suffix of
+															<code>.response.ts</code>, a new value was added to <code>"dtoFileNameSuffix"</code> inside the
+															<code>nest-cli.json</code> file.
+															<blockquote><strong>IMPORTANT:</strong> As a personal rule, considering this backend connects to a PostgreSQL
+																database that uses a lot of tables and relationships, I've settled on creating <a
+																	href="https://docs.nestjs.com/recipes/crud-generator#generating-a-new-resource">resources</a> that emulate
+																the schemas in the database. For example, if I have a schema called <code>auth</code>, an <code>auth/</code>
+																folder would be made under <code>src/</code> for operations regarding this schema; it would have a controller,
+																service(s), entities, interfaces, dtos, etc... Overall, NestJS follows the same structure as an Angular
+																project, so any good habits from there can be transferred over here.</blockquote>
+														</li>
+													</ul>
+												</li>
+												<li><strong>Routing:</strong> <a href="https://restfulapi.net/resource-naming/">This resource</a> explains it best.
+													Nevertheless, I shall point out a few cases that are most likely to be implemented poorly.
+													<ul>
+														<li><strong>Use hyphens (-) to improve the readability of URIs:</strong> As the title says, a good route should
+															use hyphens to separate words, no underscores, no uppercase letters. Here's a simple example:
+															<blockquote><code>auth/modules/:id/contentBlocks</code> ❌<br>
+																<code>auth/modules/:id/content-blocks</code> ✅
+															</blockquote>
+														</li>
+														<li><strong>Singleton and Collection Resources:</strong> Put, in a way that the previous resource already
+															explained, basically if you have an entity <code>module</code>, we would create a route with the name of the
+															entity in plural <code>modules</code> for operations that have something to do with it. This way, we can write
+															easy-to-read routes that can handle different cases without confusing anybody (as well as establish a clear
+															hierarchy when dealing with relationships). I'll present an example of the wrong and right way of doing this:
+															<blockquote><code>auth/getModule/:id</code> ❌<br>
+																<code>auth/modules/:id</code> ✅<br>
+																<code>auth/getAllModules</code> ❌<br>
+																<code>auth/modules</code> ✅<br>
+																<code>auth/getModule/:id/contentBlocks</code> ❌<br>
+																<code>auth/modules/:id/content-blocks</code> ✅
+															</blockquote>
+														</li>
+														<li><strong>Use query components to filter URI collection:</strong> The resource already makes a good point about
+															it, so I will only provide a practical example of this if the need ever arises:
+<pre><code class="language-typescript">// form-query.dto.ts
+import { PartialType, OmitType } from "@nestjs/swagger";
+import { Form } from "../entities/form.entity";
+
+/**
+* Class used for validation in lookups, for example:
+* /forms?id=1&name=registro%20abonados -> HTTP 200
+* /forms?name=consulta -> HTTP 200
+* /forms?formGroups=2 -> HTTP 404
+*/
+export class FormQueryDto extends PartialType(OmitType(Form, ['formGroups'] as const)) {}
+
+// dynamic-content.service.ts
+public async findForm(fields: FormQueryDto): Promise&lt;Form | null&gt; {
+  // for more details: https://orkhan.gitbook.io/typeorm/docs/repository-api
+  return this.formsRepository.findOne({ where: fields });
+}</code></pre>
+															In this example, we simply use a Class <code>FormQueryDto</code> that describes the <code>Form</code> entity and
+															does not include the <code>formGroups</code> property. In other words, we pass an object to
+															<code>findForm</code> with optional keys that match the columns of this <code>Form</code> entity/table and use
+															them to generate a where clause.
+															<blockquote><strong>IMPORTANT:</strong> Implementation may vary depending on whether ORM is being used or just
+																plain SQL queries.</blockquote>
+														</li>
+													</ul>
+												</li>
+												<li><strong>Testing:</strong> If you're working on a new module or adding some new functionality to the project,
+													creating test files is by no means obligatory, <strong>however</strong>, if you're working on existing code which
+													already has a test file with tests that are defined, it is your <strong>responsibility</strong> to maintain those
+													tests if the objective of your work is to update or change the logic of what is being tested.</li>
+											</ol>
+											
+											<h2>Additional Notes</h2>
+											
+											<p>When sending HTTP errors to the client, for a standard response among all routes, please use NestJS built-in <a
+													href="https://docs.nestjs.com/exception-filters#built-in-http-exceptions">exceptions</a>. For example:</p>
+											
+<pre><code class="language-typescript">// server side
+throw new BadRequestException('Bad request error', { cause: new Error(), description: 'Some error description' })
+
+// what the client receives
+{
+  "message": "Bad request error",
+  "error": "Some error description",
+  "statusCode": 400,
+}</code></pre>
+											
+											<p>Regarding the <code>cause</code> option property and the <code>Error</code> object, an error generated by the system
+												should be of type <code>Error</code>, so the following should be acceptable:</p>
+											
+<pre><code class="language-typescript">// database.service.ts
+async function find(id: number): Promise&lt;Item&gt; {
+  let item = await this.db.execute('...', [id])
+  return item
+}
+
+// item.controller.ts
+@Get(':id')
+example(@Param('id', ParseIntPipe) id: number) {
+  try {
+    let item = await this.databaseService.find(id)
+    return item
+  } catch (error) { // error should be of type Error
+    throw new InternalServerErrorException('Internal server error', { cause: error, description: 'There was a problem finding an item with id=' + id })
+  }
+}</code></pre>
+											
+											<blockquote>Do take into account that NestJS already handles <strong>internal server errors</strong> when they occur due to a rejected promise or bad code. Therefore, unless you want to be more explicit with your error message, there is no need to wrap your code inside a <code>try-catch</code> in order to specify that an internal server error occurred, like the one in the example above.</blockquote>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Assembly code for automatic car -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-custom">
+								<div class="panel-heading" role="tab" id="exampleFive">
+									<h4 class="panel-title">
+										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseExampleFive" aria-expanded="false" aria-controls="collapseOne">
+											Assembly code for automatic car
+										</a>
+									</h4>
+								</div>
+								<div id="collapseExampleFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exampleFive">
+									<div class="panel-body">
+<pre><code class="language-mipsasm">list P = 16F877A
+include &lt;P16F877A.inc&gt;
+;**************************************** README **************************************************************
+;* Lower side sensors:                                                                                        *
+;* -RB7: front                                                                                                *
+;* -RB6: right                                                                                                *
+;* -RB5: back                                                                                                 *
+;* -RB4: left                                                                                                 *
+;*                                                                                                            *
+;* Ultrasound sensor:                                                                                         *
+;* -RB0: echo pin, este pin se pone en 0 cuando se recibe el eco del sensor                                   *
+;* -RB1: Trig pin, este pin se usa para generar el pulso de 10 micro segundos para mandar una onda            *
+;*                                                                                                            *
+;* Mode port:                                                                                                 *
+;* - RD0 (1 = CompMode, 0 = TrackMode)                                                                        *
+;*                                                                                                            *
+;* Interrupciones usadas (Track Mode):                                                                        *
+;* - RB port change                                                                                           *
+;*                                                                                                            *
+;* Interrupciones usadas (Comp Mode):                                                                         *
+;* - TMR1                                                                                                     *
+;* - RB port change                                                                                           *
+;*                                                                                                            *
+;* Notas:                                                                                                     *
+;* - pendiente de cuando manipular el registro timer para evitar comportamientos raros (en interrupciones)    *
+;* - recuerda poner algo debajo de ChckRB5 en steppingLine, que comportamiento para los sensores laterales    *
+;* seria bueno?                                                                                               *
+;* - steppingLine es un trabajo en progreso, el comportamiento puede ser discutido                            *
+;* - las funciones para girar todavia no estan disenadas para ser usadas en retroceso                         *
+;* - en TrackInt se asume que los sensores laterales estan fuera de la linea                                  *
+;**************************************************************************************************************
+
+;**************************************** Variables *************************************************************
+
+W_AUX EQU 20h
+speed EQU 21h ; variable que guarda la velocidad actual del carro
+turn_speed EQU 22h ; variable que posee valores menores a speed, se obtiene de la division de speed
+aux EQU 23h ; variable auxiliar para realizar operaciones matematicas
+cociente EQU 24h ; variable auxiliar para obtener el cociente en una division
+
+;************* Variables modo COMP *****************************
+time EQU 25h
+isReverse EQU 26h ; booleano que indica si el carro va en reverso, bit 0 = 1 significa true
+isEscaping EQU 27h ; booleano que indica si el carro esta escapando de la linea negra
+toggle EQU 28h
+isRotating EQU 29h
+ms500_to_sweep EQU 2Ah
+sweeps EQU 2Bh
+ms500_to_rotate EQU 2Ch
+previous_state0 EQU 2Dh
+previous_state1 EQU 2Eh
+current_state EQU 2Fh
+;***************************************************************
+
+;****************************************************************************************************************
+
+org 0h
+    btfss PORTD, 0 ; asumiendo que RD0 es el que me dice en que modo esta
+    goto TrackMode
+    goto CompMode
+;********************************** Interrupcion ****************************************************************		
+org 4h
+    movwf W_AUX ; guardo el valor previo de W para no generar comportamientos raros
+    btfss PORTD, 0
+    goto TrackM ; Track Mode Interruption
+    btfss INTCON, 0 ; reviso bandera de RB&lt;7:4&gt;
+    goto NotRB
+    call RBChangeInt
+    movf W_AUX, 0 ; devuelvo el valor de W
+    retfie
+NotRB	call TMR1Int
+    movf W_AUX, 0 ; devuelvo el valor de W
+    retfie
+
+TrackM	call TrackInt
+    movf W_AUX, 0 ; devuelvo el valor de W
+    retfie	
+;****************************************************************************************************************
+org 16h
+TrackMode
+;************************************** Configuracion Track Mode ************************************************
+    movf PORTB, 0 ; leo PORTB para poder bajar la bandera de RB port change por si se encuentra en 1 
+    bcf INTCON, 0 ; bajo la bandera RBIF
+    
+    ;************* Configuracion PWM 1 y 2 *************************
+    ; PWMduty cycle = (CCPR1L : CCP1CON(5,4))*Tosc*(Prescaler de TMR2)
+    ; En nuestro caso: duty cycle de 100% es decir, CCPR1L = 255, hallo el periodo -> 1*PWMperiodo = 1020*(1/4*10^-6)*16 = 4.08*10^-3, 1020 es 11111111:00 => CCPR1L:CCP1CON(5,4) con CCPR1L = ADRESH
+    clrf CCPR1L ; el duty sera de 0 al inicio
+    clrf CCPR2L
+    bsf STATUS, 5
+    movlw d'254' ; PWMperiodo = (PR2+1)*4*Tosc*(Prescaler de TMR2) => PR2 = (4.08*10^-3)/(10^-6 * 16) = 254
+    movwf PR2 ; el valor calculado de X se carga para el periodo de la onda, el valor de PR2, no se debe exceder de 255 o ser negativo en el calculo, si se excede se debe usar otro prescaler
+    
+    ;************* Configuracion pines ********
+    bcf TRISC, 2 ; configuro pin ccp1 como salida
+    bcf TRISC, 1 ; configuro pin ccp2 como salida
+    ; RB&lt;7:4&gt; son los sensores
+    ;******************************************
+    
+    ;************* Configuracion INT **********
+    bsf INTCON, 7 ; global
+    bsf INTCON, 3 ; RB Port Change Interrupt Enable bit RB&lt;7:4&gt;
+    ;******************************************    
+    
+    bcf STATUS, 5
+    bsf T2CON, 1 ; configuro el prescaler 16 de TMR2, 00 = 1, 01 = 4, 1X = 16
+    bsf T2CON, 2 ; prendo el TMR2
+    bsf CCP1CON, 3 ; configuro el modulo CCP1 como PWM (11xx de bits 3-0)
+    bsf CCP1CON, 2
+    bsf CCP2CON, 3 ; configuro el modulo CCP2 como PWM (11xx de bits 3-0)
+    bsf CCP2CON, 2
+    ;***************************************************************	
+;****************************************************************************************************************
+
+;****************************** Inicializacion de variables ******************************************************
+    clrf speed
+    clrf turn_speed
+    clrf cociente
+;****************************************************************************************************************
+
+;**************************************** Main Tracking Mode ****************************************************
+    movlw d'128' ; MED_SPEED
+    call setSpeed ; speed = MED_SPEED
+    movlw d'64' ; speed/2
+    movwf turn_speed
+    call stopTurning ; el carro va derecho al inicio
+TMain 	goto TMain
+;****************************************************************************************************************
+
+;************************************** Funciones INT Track Mode ************************************************
+TrackInt
+    btfsc PORTB, 6 ; left && right
+    btfss PORTB, 4
+    goto ChckRB6
+    call stopTurning
+    goto TrckEnd
+ChckRB6	btfss PORTB, 6 ; reviso si el sensor de la derecha detecto la linea negra, si la toco entonces el carro tiene que girar a la derecha
+    goto ChckRB4
+    call turnRight
+    goto TrckEnd
+ChckRB4 btfss PORTB, 4
+    goto AllOff ; left || right = false
+    call turnLeft
+    goto TrckEnd
+AllOff	call stopTurning		
+TrckEnd	bcf INTCON, 0 ; bajo la bandera
+    return
+;****************************************************************************************************************
+
+;***********************************************************************************************************************************************************
+;***********************************************************************************************************************************************************
+;***********************************************************************************************************************************************************
+
+CompMode
+;************************************** Configuracion Comp Mode *************************************************
+    movf PORTB, 0 ; leo PORTB para poder bajar la bandera de RB port change por si se encuentra en 1 
+    bcf INTCON, 0 ; bajo la bandera RBIF
+    
+    ;************* Configuracion PWM 1 y 2 *************************
+    ; PWMduty cycle = (CCPR1L : CCP1CON(5,4))*Tosc*(Prescaler de TMR2)
+    ; En nuestro caso: duty cycle de 100% es decir, CCPR1L = 255, hallo el periodo -> 1*PWMperiodo = 1020*(1/4*10^-6)*16 = 4.08*10^-3, 1020 es 11111111:00 => CCPR1L:CCP1CON(5,4) con CCPR1L = ADRESH
+    clrf CCPR1L ; el duty sera de 0 al inicio
+    clrf CCPR2L
+    bsf STATUS, 5
+    movlw d'254' ; PWMperiodo = (PR2+1)*4*Tosc*(Prescaler de TMR2) => PR2 = (4.08*10^-3)/(10^-6 * 16) = 254
+    movwf PR2 ; el valor calculado de X se carga para el periodo de la onda, el valor de PR2, no se debe exceder de 255 o ser negativo en el calculo, si se excede se debe usar otro prescaler
+    
+    ;************* Configuracion pines ********
+    bcf TRISC, 2 ; configuro pin ccp1 como salida
+    bcf TRISC, 1 ; configuro pin ccp2 como salida
+    bcf TRISB, 1 ; RB1 es el Trig del sensor de ultrasonido
+    ; RB&lt;7:4&gt; son los sensores
+    ;******************************************
+    
+    ;************* Configuracion INT **********
+    bsf INTCON, 7 ; global
+    bsf INTCON, 3 ; RB Port Change Interrupt Enable bit RB&lt;7:4&gt;
+    bsf INTCON, 6 ; int perifericos
+    bsf PIE1, 0 ; habilito la interrupcion del overflow del TMR1
+    ;******************************************    		
+    
+    ;************* Configuracion TMR0 ******************************
+    bcf OPTION_REG, 0 ; prescaler 128 para cubrir la distancia maxima de 4 metros (TMR0 = 182) y evitar overflows
+    bcf OPTION_REG, 5 ; el tmr0 es temporizador
+    bcf OPTION_REG, 3 ; prescaler asignado a tmr0
+    ;***************************************************************
+    
+    bcf STATUS, 5
+    
+    ;************* Configuracion TMR1 *********
+    ; configuro aqui el prescaler de T1CON (bits 5-4 => 11 = 1:8, 10 = 1:4, 01 = 1:2, 00 = 1:1)
+    bsf T1CON, 5
+    bsf T1CON, 4
+    bsf T1CON, 3 ; habilito el oscilador
+    clrf TMR1H
+    clrf TMR1L
+    ; ** recuerda prender el TMR1 en algun lado "bsf T1CON, 0" **
+    ;******************************************
+    
+    bsf T2CON, 1 ; configuro el prescaler 16 de TMR2, 00 = 1, 01 = 4, 1X = 16
+    bsf T2CON, 2 ; prendo el TMR2
+    bsf CCP1CON, 3 ; configuro el modulo CCP1 como PWM (11xx de bits 3-0)
+    bsf CCP1CON, 2
+    bsf CCP2CON, 3 ; configuro el modulo CCP2 como PWM (11xx de bits 3-0)
+    bsf CCP2CON, 2
+    ;***************************************************************
+    
+    bcf PORTB, 1 ; lo pongo en 0 por si estaba en 1 antes (para el sensor)
+;****************************************************************************************************************
+
+;****************************** Inicializacion de variables *****************************************************
+    clrf speed
+    clrf turn_speed
+    clrf cociente
+    clrf isReverse
+    clrf isEscaping
+    clrf time
+    clrf toggle
+    clrf isRotating
+    movlw d'5' ; al comienzo el carro va a comenzar en el medio del barrido
+    movwf ms500_to_sweep
+    clrf sweeps
+    clrf ms500_to_rotate
+    clrf previous_state0
+    clrf previous_state1
+;****************************************************************************************************************
+
+;**************************************** Main Comp Mode ********************************************************
+    bsf T1CON, 0 ; prendo el tmr1
+    call medSeg  ; los 500ms iniciales al barrir
+CMain 	btfsc isEscaping, 0 ; si el carro esta escapando, no hacer nada
+    goto CMain
+    ;************ ultra sound block ****************
+    call assessProximity ; si activateUltraSound retorna C = 0, si esta en proximidad
+    btfsc STATUS, 0 ; verifico CFLAG de la operacion hecha en assessProximity (C = 0 significa que si esta en proximidad)
+    goto NtClose ; not close
+    bcf isRotating, 0 ; el carro detecto algo, borra todo sobre el movimiento usual
+    clrf ms500_to_rotate
+    clrf sweeps
+    movlw d'5'
+    movwf ms500_to_sweep ; el carro hara medio barrido como el inicio
+    btfsc isEscaping, 0 ; en caso de que ocurra una interrupcion despues de assessProximity y no despues del inicio de CMain
+    goto CMain
+    movlw d'255'
+    call setSpeed
+    call stopTurning
+    call medSeg ; esto va a interrumpir solo cuando assessProximity ha fallado 20 veces seguidas (25ms * 20 = 500ms)
+    goto CMain
+    ;***********************************************
+NtClose	btfsc isRotating, 0 ; si el carro esta rotando, dejar volver a medir la distancia al inicio del CMain
+    goto CMain
+    ; aqui ocurre el barrido
+    movlw d'64' ; SEEKING_SPEED
+    call setSpeed
+    movlw d'32' ; SEEKING_SPEED/2
+    movwf turn_speed
+    btfss toggle, 0 ; toggle alterna cada 5 segundos, haciendo que el carro se mueva como una serpiente
+    goto Lft
+    call turnRight
+    goto CMain
+Lft		call turnLeft
+		goto CMain
+;****************************************************************************************************************
+
+;************************************** Funciones INT Comp Mode *************************************************
+RBChangeInt ; tomo las medidas necesarias para redirigir el auto
+		bsf isEscaping, 0
+		clrf current_state ; cero inicial del estado actual
+		btfsc PORTB, 4
+		goto StpLine
+		btfsc PORTB, 6
+		goto StpLine
+		btfsc PORTB, 5
+		goto StpLine
+		call checkScenario ; verifica un escenario espesifico, Z = 1 significa que si se dio el escenario
+		btfsc STATUS, 2 ; verifico el valor de Z, si es 0 entonces el escenario no se cumplio
+		call stopTurning ; el escenario resulto ser cierto
+		call saveState ; en este bloque current_state se queda en 0
+		bsf T1CON, 0 ; todos los sensores estan en 0, por lo tanto esta escapando
+		call medSeg
+		clrf time ; limpio el timer para indicar el comienzo de la salida de la linea negra
+		goto RBEnd
+StpLine	btfsc PORTB, 4 ; le asigno los bits que estan encendidos a current_state
+		bsf current_state, 4
+		btfsc PORTB, 5
+		bsf current_state, 5
+		btfsc PORTB, 6
+		bsf current_state, 6
+		call saveState ; guardo el nuevo estado		
+		call fullyDeactivateTMR1 ; limpio todo los procesos que involucren el tmr1 fuera de la interrupcion RB
+		call stopTurning ; detengo lo que estaba haciendo antes
+		call steppingLine ; aqui verifico los bits de RB para tomar las medidas correspondientes
+RBEnd	bcf INTCON, 0 ; apago la bandera al final cuando PORTB vuelve a su estado original (00000000) asumiendo que los sensores al detectar la linea negra se pongan en 1
+		return
+
+TMR1Int ; verifico cuantos segundos han pasado (todavia no se sabe cuantos segundos seran, por ahora 4s)
+		bcf PIR1, 0 ; apago la bandera del TMR1 overflow
+		btfss isEscaping, 0
+		goto IsRotng ; is rotating?
+		incf time, 1 ; aqui el carro esta escapando
+		btfsc time, 3 ; si time es 8, han pasado 4 segundos
+		goto Safe ; time = 8
+		call medSeg ; si no es 8 entonces espero el otro medio segundo
+		return
+Safe	; aqui el carro hace lo suyo, despues de exitosamente salirse de la linea negra hace 4 segundos
+		clrf time ; limpio time
+		bcf isReverse, 0 ; por si el carro iba en reversa
+		bcf isEscaping, 0 ; es el final del escape
+		call medSeg ; empieza el conteo del modo de barrido
+		return			
+isRotng	btfss isRotating, 0
+		goto NtRot ; not rotating
+		incf ms500_to_rotate, 1
+		movlw d'24'
+		subwf ms500_to_rotate, 0
+		btfss STATUS, 2 ; ms500_to_rotate == 24 (12 segundos)
+		goto DntStop ; dont stop rotating, keep counting
+		clrf ms500_to_rotate
+		bcf isRotating, 0 ; ya el carro no esta rotando
+		call stopTurning
+		movlw d'5' ; el carro va a entrar en medio barrido como el comienzo
+		movwf ms500_to_sweep
+DntStop	call medSeg ; es el inicio del barrido o seguir contando la rotacion
+		return
+NtRot	incf ms500_to_sweep, 1 ; si no esta rotando ni esta escapando, el carro deberia estar barriendo
+		movlw d'10' ; SWEEP_TIME
+		subwf ms500_to_sweep, 0
+		btfss STATUS, 2 ; ms500_to_sweep == 10
+		goto KpSwpng ; not yet, dont toggle, keep sweeping
+		movlw d'1'
+		xorwf toggle, 1 ; toggle = !toggle, 1 xor 1 = 0 ; 1 xor 0 = 1
+		clrf ms500_to_sweep
+		incf sweeps, 1
+		btfss sweeps, 2 ; si sweeps = 4, es decir si el carro barrio 4 veces
+		goto KpSwpng ; si sweeps no es 4, simplemente sigo en el medio del barrido
+		clrf sweeps ; si sweeps = 4 -> sweeps = 0 y el resto de lo que sigue
+		bsf isRotating, 0
+		call rotate
+KpSwpng	call medSeg ; o sigue barriendo o empieza el conteo del inicio de la rotacion
+		return
+;****************************************************************************************************************
+
+;***********************************************************************************************************************************************************
+;***********************************************************************************************************************************************************
+;***********************************************************************************************************************************************************
+
+;************************************** Funciones Generales *****************************************************
+medSeg	; le doy el valor necesario a TMR1 para que interrumpa en medio segundo
+		movlw b'11011100'
+		movwf TMR1L
+		movlw b'00001011'
+		movwf TMR1H
+		return
+		
+setSpeed ; accepts a value from w
+		movwf speed
+		return
+		
+turnRight ; disminuir la velocidad de las ruedas en la derecha
+		movf speed, 0
+		movwf CCPR1L
+		movf turn_speed, 0
+		movwf CCPR2L
+		return
+
+turnLeft ; disminuir la velocidad de las ruedas en la izquierda
+		movf speed, 0
+		movwf CCPR2L
+		movf turn_speed, 0
+		movwf CCPR1L
+		return
+		
+stopTurning ; ambos lados tienen la misma velocidad
+		movf speed, 0
+		movwf CCPR1L
+		movwf CCPR2L
+		return
+
+assessProximity ; funcion que inicia el sensor y retorna una respuesta (valor de Carry)
+		bsf PORTB, 1 ; TRIG = 1
+		call delay10us
+		bcf PORTB, 1
+WtEcho	btfss PORTB, 0
+		goto WtEcho ; wait echo
+		clrf TMR0 ; el tmr0 va a empezar a contar desde 0
+NotYet	btfsc PORTB, 0 ; espero a que el pin de eco se baje, que es cuando recibe la respuesta
+		goto NotYet
+		call TMR0_OFF
+		movlw d'6' ; distancia cm = (X*Prescaler/2*29,1) => 10 cm = (X*128/2*29,1) => X = 4,54 = 5 => distancia cm = (5*128/2*29,1) = 10,99 = 11
+		subwf TMR0, 0 ; si TMR0 = 5 -> 5 - 6 = -1 -> C = 0, si esta en proximidad (11 cm)
+		return
+
+delay10us
+		nop ; aqui hay 6 nops, el call y return cuentan como 4 micro segundos
+		nop
+		nop
+		nop
+		nop
+		nop
+		return
+
+fullyDeactivateTMR1 ; nombre bastante explicatorio, esto se llama cuando ocurren tanto cosas inesperadas como momentos de seguridad al salirse de la linea negra
+		bcf T1CON, 0
+		clrf TMR1H
+		clrf TMR1L
+		clrf time
+		clrf sweeps
+		clrf ms500_to_rotate
+		clrf ms500_to_sweep
+		bcf isRotating, 0
+		return		
+
+saveState ; funcion que guarda los nuevos estados
+		movf previous_state1, 0
+		movwf previous_state0 ; previous_state0 = previous_state1
+		movf current_state, 0
+		movwf previous_state1 ; previous_state1 = current_state
+		return
+		
+checkScenario
+		movlw b'010100000' ; sensores laterales encendidos
+		subwf previous_state0, 0
+		btfss STATUS, 2
+		return ; retornara Z = 0
+		btfsc previous_state1, 4 ; sensor de la izquierda
+		return ; retornara Z = 1
+		btfsc previous_state1, 6 ; sensor de la derecha
+		return ; retornara Z = 1
+		bcf STATUS, 2
+		return ; retornara Z = 0
+		
+
+steppingLine ; funcion que se llama cuando el carro toca la linea en modo competitivo
+		btfsc PORTB, 4 ; LEFT_SENSOR && RIGHT_SENSOR
+		btfss PORTB, 6
+		goto Nxt1 ; siguiente condicion
+		; sensor izquierdo y derecho estan activados
+		bsf isReverse, 0
+		movlw d'255' ; FULL_SPEED
+		call setSpeed ; speed = FULL_SPEED
+		call stopTurning
+		return
+Nxt1	btfsc PORTB, 4 ; LEFT_SENSOR && BACK_SENSOR
+		btfss PORTB, 5
+		goto Nxt2
+		; sensor izquierdo y trasero estan activados
+		bcf isReverse, 0
+		movlw d'255' ; FULL_SPEED
+		call setSpeed ; speed = FULL_SPEED
+		movlw d'128' ; FULL_SPEED/2
+		movwf turn_speed
+		call turnRight
+		return
+Nxt2	btfsc PORTB, 6 ; RIGHT_SENSOR && BACK_SENSOR
+		btfss PORTB, 5
+		goto Nxt3
+		bcf isReverse, 0
+		movlw d'255' ; FULL_SPEED
+		call setSpeed ; speed = FULL_SPEED
+		movlw d'128' ; FULL_SPEED/2
+		movwf turn_speed
+		call turnLeft
+		return
+Nxt3	btfss PORTB, 4 ; LEFT_SENSOR
+		goto Nxt4
+		bsf isReverse, 0
+		movlw d'255' ; FULL_SPEED
+		call setSpeed ; speed = FULL_SPEED
+		movlw d'128' ; FULL_SPEED/2
+		movwf turn_speed
+		call turnRight
+		return
+Nxt4	btfss PORTB, 6 ; RIGHT_SENSOR
+		goto Nxt5
+		bsf isReverse, 0
+		movlw d'255' ; FULL_SPEED
+		call setSpeed ; speed = FULL_SPEED
+		movlw d'128' ; FULL_SPEED/2
+		movwf turn_speed
+		call turnLeft
+		return
+Nxt5	btfss PORTB, 5 ; BACK_SENSOR
+		return ; guess I'll die (the port change would be the only sensor that left the black line, or something like that, think of it like a null check)
+		bcf isReverse, 0
+		movlw d'255' ; FULL_SPEED
+		call setSpeed ; speed = FULL_SPEED
+		call stopTurning
+		return
+		
+rotate ; funcion que hace rotar al carro
+		nop
+		return
+;****************************************************************************************************************
+
+end
+</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- C code for automatic car -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-custom">
+								<div class="panel-heading" role="tab" id="exampleSix">
+									<h4 class="panel-title">
+										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseExampleSix" aria-expanded="false" aria-controls="collapseOne">
+											C code for Automatic Car
+										</a>
+									</h4>
+								</div>
+								<div id="collapseExampleSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exampleSix">
+									<div class="panel-body">
+<pre><code class="language-c">// CONFIG
+#pragma config FOSC = XT // Oscillator Selection bits (XT oscillator)
+#pragma config WDTE = OFF // Watchdog Timer Enable bit (WDT disabled)
+#pragma config PWRTE = OFF // Power-up Timer Enable bit (PWRT disabled)
+#pragma config BOREN = ON // Brown-out Reset Enable bit (BOR enabled)
+#pragma config LVP = OFF // Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit (RB3 is digital I/O, HV on MCLR must be used for programming)
+#pragma config CPD = OFF // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off)
+#pragma config WRT = OFF // Flash Program Memory Write Enable bits (Write protection off; all program memory may be written to by EECON control)
+#pragma config CP = OFF // Flash Program Memory Code Protection bit (Code protection off)
+
+#include &lt;xc.h&gt;
+
+#define _XTAL_FREQ 4000000
+#define TRUE 1
+#define FALSE 0
+
+#define MODE RD0 // 1 = comp, 0 = tracking
+
+/*
+ * mux control:
+ * GEAR2 | GEAR1 | action
+ * 0       0       forward
+ * 0       1       reverse
+ * 1       0       rotate right
+ * 1       1       rotate left
+ */
+#define GEAR1 RD1
+#define GEAR2 RD2
+
+/* speed constants for variable speed */
+#define FULL_SPEED 255
+#define MED_SPEED 128
+#define SEEKING_SPEED 64
+
+/* left and right sensor remain outside the line in tracking mode */
+#define LEFT_SENSOR RB4
+#define RIGHT_SENSOR RB6
+#define BACK_SENSOR RB5
+
+#define ECHO RB2 //not decided yet
+#define TRIG RB1
+#define PROXIMITY_DISTANCE 5 // 5 => 11 cm with TMR0 prescaler = 128
+
+#define SWEEP_TIME 10 // 5 seconds for a full sweep => 10 because tmr1 counts up to 500ms
+#define ROTATING_TIME 24 // 12 seconds for a full 360 rotation, this depends on the car itself
+
+typedef struct {
+  unsigned isReverse: 1;
+  unsigned isEscaping: 1; // if it's not escaping, it's seeking a new target
+  unsigned isRotating: 1;
+  unsigned: 5;
+}
+CarState;
+volatile CarState car_state = {
+  FALSE,
+  FALSE,
+  FALSE
+};
+
+volatile bit toggle = FALSE;
+
+typedef unsigned char byte;
+volatile byte time = 0;
+volatile byte speed = 0;
+volatile byte turn_speed = 0;
+volatile byte ms500_to_sweep = 5; // in the beginning the car will start in the middle of the sweep
+volatile byte sweeps = 0;
+volatile byte ms500_to_rotate = 0;
+
+typedef union {
+  struct {
+    unsigned: 4;
+    unsigned left_sensor: 1; //RB4
+    unsigned back_sensor: 1; //RB5
+    unsigned right_sensor: 1; //RB6
+    unsigned: 1;
+  }; // bits
+  byte portb; // bytes
+}
+portb_state;
+
+/* 
+ * previous_states: variable that holds the previous state of the sensors.
+ * I could also just do 'byte previous_states[2] = {0, 0}' and when adding a new state just do 'previous_states[1] = {PORTB}' for example,
+ * and compare like so 'previous_states[1] == 0x06', the problem with this is scalability, I'd have to ground every other pin of PORTB for the comparison to work.
+ */
+volatile portb_state previous_states[2];
+
+/* Configuration functions */
+inline void PWM_INIT(void);
+inline void INT_INIT(void);
+inline void TMR1_INIT(void);
+inline void TMR0_INIT(void);
+
+/* Main functions */
+void setSpeed(byte); // accepts FULL_SPEED, MED_SPEED and SEEKING_SPEED
+
+// this is done to multiplex the pwm accordingly
+void adjustTrayectory(void);
+
+void turnRight(void);
+void turnLeft(void);
+void stopTurning(void);
+
+/* Comp functions */
+void rotateRight(void);
+void rotateLeft(void);
+void medSeg(void);
+bit assessProximity(byte);
+
+/* functions used only in interruptions */
+inline void saveState(portb_state);
+inline void steppingLine(void);
+/* 
+ * Because it's very unlikely that the car leaves the black line while turning off LEFT_SENSOR and RIGHT_SENSOR
+ * at the same time, the car will inevitably start turning left or right at some point in the end, we don't want that,
+ * therefore I make a function that checks the previous states so I make sure the car does not turn in this scenario
+ */
+bit checkScenario(void);
+
+void main(void) {
+  previous_states[0].portb = 0;
+  previous_states[1].portb = 0;
+  PORTB;
+  RBIF = 0; // just in case it's 1
+  PWM_INIT();
+  INT_INIT();
+  if (MODE) {
+    TMR1_INIT();
+    TMR0_INIT();
+  }
+  TRIG = 0; // in case it's on
+  GEAR1 = 0;
+  GEAR2 = 0;  
+  if (MODE) {
+    /* Comp mode */
+    TMR1ON = 1;
+    medSeg(); // the initial 500ms when sweeping
+    while (1) {
+      if (car_state.isEscaping) continue; // when escaping I don't want to do anything
+      if(assessProximity(PROXIMITY_DISTANCE)) {
+        // a car is near
+        // reset everything about sweeping and rotating (I don't care about the direction that comes from toggle)
+        car_state.isRotating = FALSE;
+        ms500_to_rotate = 0;
+        sweeps = 0;
+        ms500_to_sweep = 5; //the car will make half a sweep like at the beginning  
+        // assume an RB change interruption (a sensor goes high, this is the only way the interruption occurs inside this block) occurs while inside this block, the car would go forward, therefore ignoring the previous instruction that came from steppingLine(), we don't want that
+        if(car_state.isEscaping) continue; //just in case it happens after the time it takes to measure the distance, it's like a double check
+        setSpeed(FULL_SPEED);
+        stopTurning();
+        
+        // this will interrupt only when assessProximity has failed 20 times in a row (25ms * 20 = 500ms).
+        medSeg(); // this is for when the car stops chasing the car, think more about the consequences of this
+        
+      } else {
+        /* no car detected */
+        if (car_state.isRotating) continue; // when rotating don't do anything except what made isRotating = TRUE
+        else {
+          setSpeed(SEEKING_SPEED);
+          turn_speed = 32; // SEEKING_SPEED/2
+          if (car_state.isEscaping) continue; // just in case
+          if (toggle) { //toggle alternates every 5 seconds, making the car move like a snake
+            turnRight();
+          } else {
+            turnLeft();
+          }
+        }
+      }
+  	}
+  } else {
+    /* Tracking mode */
+    setSpeed(FULL_SPEED);
+    stopTurning(); // assigns the speed to the proper motors
+    while (1);
+  }
+  return;
+}
+
+inline void PWM_INIT(void) {
+  CCPR1L = 0;
+  CCPR2L = 0;
+  PR2 = 254;
+  TRISC1 = 0; //motor pins
+  TRISC2 = 0;
+  T2CKPS1 = 1; // TMR2 prescaler = 1:16
+  TMR2ON = 1;
+  CCP1M3 = 1; // b'1100'
+  CCP1M2 = 1;
+  CCP2M3 = 1; // b'1100'
+  CCP2M2 = 1;
+  return;
+}
+
+inline void INT_INIT(void) {
+  GIE = 1;
+  RBIE = 1;
+  if (MODE) {
+    PEIE = 1;
+    TMR1IE = 1;
+  }
+  return;
+}
+
+inline void TMR1_INIT(void) {
+  T1CKPS0 = 1; // TMR1 prescaler = 1:8
+  T1CKPS1 = 1;
+  TMR1 = 0;
+  return;
+}
+
+inline void TMR0_INIT(void) {
+  PS0 = 0; //prescaler 128
+  PSA = 0; //prescaler assigned to TMR0
+  T0CS = 0; // TMR0 clock source = internal cycle clock
+  return;
+}
+
+void setSpeed(byte spd) {
+  speed = spd;
+  return;
+}
+
+void adjustTrayectory(void) {
+  GEAR2 = 0;
+  GEAR1 = car_state.isReverse; //check mux controls
+  return;
+}
+
+void turnRight(void) {
+  adjustTrayectory();
+  CCPR1L = speed;
+  CCPR2L = turn_speed;
+  return;
+}
+
+void turnLeft(void) {
+  adjustTrayectory();
+  CCPR2L = speed;
+  CCPR1L = turn_speed;
+  return;
+}
+
+void stopTurning(void) {
+  adjustTrayectory();
+  CCPR1L = speed;
+  CCPR2L = speed;
+  return;
+}
+
+void rotateRight(void) {
+  GEAR1 = 0;
+  GEAR2 = 1;
+  CCPR1L = speed; // going full forward
+  CCPR2L = speed; // going full reverse
+  return;
+}
+
+void rotateLeft(void) {
+  GEAR1 = 1;
+  GEAR2 = 1;
+  CCPR1L = speed; // going full reverse
+  CCPR2L = speed; // going full forward
+  return;
+}
+
+void medSeg(void) {
+  TMR1 = 3036; // after setting TMR1, I wait for an interruption
+  return;
+}
+
+bit assessProximity(byte distance) {
+  TRIG = 1;
+  __delay_us(10);
+  TRIG = 0;
+  while (!ECHO); // I wait for echo pin to go up
+  TMR0 = 0; // I start counting, with prescaler 128, the max value it will get is 182 (4 meters)
+  while (ECHO); // I wait for echo pin to go down
+  return (TMR0 & lt; = distance);
+}
+
+/* cleans everything concerning TMR1 functionality outside RB change interruption */
+void fullyDeactivateTMR1(void) {
+  TMR1ON = 0;
+  TMR1 = 0;
+  time = 0;
+  sweeps = 0;
+  ms500_to_rotate = 0;
+  ms500_to_sweep = 0;
+  car_state.isRotating = FALSE;
+  return;
+}
+
+inline void saveState(portb_state state) {
+  previous_states[0].portb = previous_states[1].portb;
+  previous_states[1].portb = state.portb;
+  return;
+}
+
+/* This function is subject of discussion */
+inline void steppingLine(void) {
+  if (LEFT_SENSOR && RIGHT_SENSOR) {
+    car_state.isReverse = TRUE;
+    setSpeed(FULL_SPEED);
+    stopTurning();
+  } else if (LEFT_SENSOR && BACK_SENSOR) {
+    car_state.isReverse = FALSE;
+    setSpeed(FULL_SPEED);
+    turn_speed = 127; //FULL_SPEED/2
+    turnRight();
+  } else if (RIGHT_SENSOR && BACK_SENSOR) {
+    car_state.isReverse = FALSE;
+    setSpeed(FULL_SPEED);
+    turn_speed = 127; //FULL_SPEED/2
+    turnLeft();
+  } else if (LEFT_SENSOR) {
+    car_state.isReverse = TRUE;
+    setSpeed(FULL_SPEED);
+    turn_speed = 127; //FULL_SPEED/2
+    turnRight();
+  } else if (RIGHT_SENSOR) {
+    car_state.isReverse = TRUE;
+    setSpeed(FULL_SPEED);
+    turn_speed = 127; //FULL_SPEED/2
+    turnLeft();
+  } else if (BACK_SENSOR) { // this could just be an else but I'm leaving it like this just in case
+    car_state.isReverse = FALSE;
+    setSpeed(FULL_SPEED);
+    stopTurning();
+  }
+  return;
+}
+
+//before entering this function, it is known that all sensors are 0
+bit checkScenario(void) {
+  if (previous_states[0].portb == 0x50) { // b'0101 0000', left_sensor and right_sensor = 1, everything else 0
+    return (previous_states[1].left_sensor || previous_states[1].right_sensor); //note: left_sensor and right_sensor will never be 1 at the same time due to the nature of the RB change interruption, so || really is just asking if either left_sensor or right_sensor is 1
+  } else {
+    return 0;
+  }
+}
+
+void interrupt ISR(void) {
+  if (MODE) {
+    /* Comp mode interruption */
+    if (RBIF) {
+      car_state.isEscaping = TRUE; // the car is trying to escape, this becomes FALSE after 4 seconds have passed since the sensor were 0
+      portb_state state;
+      state.portb = 0; // initial clear, then I assign the bits that are 1 or 0, a simple state.portb = PORTB would work but for scalability on PORTB I'm not doing it like that, some RB pins may be used in the future
+      if (LEFT_SENSOR || RIGHT_SENSOR || BACK_SENSOR) {
+        state.left_sensor = LEFT_SENSOR;
+        state.right_sensor = RIGHT_SENSOR;
+        state.back_sensor = BACK_SENSOR;
+        saveState(state);
+        fullyDeactivateTMR1();
+        stopTurning(); // in case the car was turning before getting knocked back
+        steppingLine(); // here I check RB bits to take the proper measures
+      } else { //here the car basically escaped the black line
+        if (checkScenario()) { // checks for this situation: [0] left and right = 1 -> [1] left or right = 1 -> [current] left, right and back = 0
+          stopTurning();
+        }
+        saveState(state); // state.portb = 0
+        TMR1ON = 1;
+        medSeg();
+        time = 0;
+      }
+      RBIF = 0;
+      return;
+    }  
+    //TMR1 interruption
+    TMR1IF = 0;
+    if (car_state.isEscaping) {
+      /* do the escaping timer function */
+      time++;
+      if (time == 8) { // if timer = 8, then 4 seconds have passed
+        // here the car does its thing
+        time = 0;
+        car_state.isReverse = FALSE; //In case the car was going in reverse
+        car_state.isEscaping = FALSE; // this condition is important for the main function
+      }
+      medSeg(); // either I keep counting or start timing the sweeping mode
+    } else if (car_state.isRotating) {
+      ms500_to_rotate++;
+      if (ms500_to_rotate == ROTATING_TIME) {
+        ms500_to_rotate = 0;
+        car_state.isRotating = FALSE;
+        stopTurning();
+        ms500_to_sweep = 5; // The car will sweep like at the start
+      }
+      medSeg(); // either it keeps rotating or starts the sweeping
+    } else { // else means it is sweeping
+      /* do the seeking movement toggle function */
+      ms500_to_sweep++;
+      if (ms500_to_sweep == SWEEP_TIME) {
+        toggle = !toggle;
+        ms500_to_sweep = 0;
+        sweeps++;
+        if (sweeps == 4) { // assume the car makes its sweeping motion 4 times before rotating 360 degrees
+          sweeps = 0;
+          car_state.isRotating = TRUE;
+          rotateRight();
+        }
+      }
+      medSeg(); // either I keep counting or I start counting the time it takes to rotate
+    }
+    // ideally I would put a medSeg() here and delete the ones above, but for code understanding I have to keep it like this
+    return;
+  }
+  /* Tracking mode interruption */
+  if (RIGHT_SENSOR && LEFT_SENSOR) { //it could happen...
+    stopTurning();
+  } else if (LEFT_SENSOR) {
+    rotateLeft();
+  } else if (RIGHT_SENSOR) {
+    rotateRight();
+  } else { // RIGHT_SENSOR || LEFT_SENSOR = false        
+    stopTurning();
+  }
+  RBIF = 0;
+  return;
+}</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MQTT Notification Manager Cloud Based node.js Server, using Push Notifications and Firebase -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-custom">
+								<div class="panel-heading" role="tab" id="exampleSeven">
+									<h4 class="panel-title">
+										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseExampleSeven" aria-expanded="false" aria-controls="collapseOne">
+											MQTT Notification Manager Cloud Based node.js Server, using Push Notifications and Firebase
+										</a>
+									</h4>
+								</div>
+								<div id="collapseExampleSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exampleSeven">
+									<div class="panel-body">
+<pre><code class="language-javascript">// get secret values
+const env = require('./environment/env');
+
+/*-------------------- DBs Setup ----------------------------*/
+// firebase setup
+const firebase = require("firebase-admin");
+const serviceAccount = require("./service_account/adminsdk-water-project.json");
+
+firebase.initializeApp({
+  credential: firebase.credential.cert(serviceAccount),
+  databaseURL: env.FIREBASE_DB_URL
+});
+
+let firebaseDB = firebase.database();
+
+// local database setup
+let MyDatabase = require('./classes/sql-db');
+let localDB = new MyDatabase();
+
+// sqlite3 is a real pain when dealing with asynchronous action (can't insert values until tables are created)
+localDB.createTables()
+  .then((res) => {
+    firebaseDB.ref('/users').on('child_added', (snapshot, prevChildKey) => {
+      localDB.setUpNewUserStates(snapshot.key);
+    });
+    firebaseDB.ref('/users').on('child_removed', (snapshot) => {
+      localDB.removeUserData(snapshot.key);
+    });
+  })
+  .catch((e) => {
+    console.log(e);
+  });
+/*-----------------------------------------------------------*/
+
+/*-------------------- Server Setup -------------------------*/
+let PORT = process.env.PORT || 5000;
+let express = require('express');
+let app = express();
+
+app.get('/', (req, res) => {
+  // send normal http response, since this is not a website really
+  res.send('app is running properly');
+});
+
+app.get('/api/:user/:from-:to', async (req, res) => {
+  let user = req.params.user;
+  let from_date = parseInt(req.params.from);
+  let to_date = parseInt(req.params.to);
+  console.log('user: ' + user);
+  console.log('from: ' + from_date);
+  console.log('to: ' + to_date);
+  try {
+    let reports = await localDB.getReports(user, from_date, to_date);
+    console.log("retrieved reports: " + reports);
+    res.json({ reports });
+  } catch(e) {
+    console.log(e);
+    res.status(400).send({ message: "error retrieving data" });
+  }
+});
+/*-----------------------------------------------------------*/
+
+// alarm manager setup
+const AlarmManager = require('./classes/alarm-manager');
+let alarmManager = new AlarmManager();
+
+// mqtt setup
+let mqtt = require('mqtt');
+let mqttClient  = mqtt.connect(env.MQTT_URL, { username: env.MQTT_USERNAME, password: env.MQTT_PASSWORD });
+
+mqttClient.on('connect', function () {
+  console.log('successfully connected to mqtt server');
+  mqttClient.subscribe('water/#', function (err) {
+    if (err) {
+      console.log('error subscribing to mqtt topic', err);
+    }
+  });
+});
+
+mqttClient.on('message', function (topic, message) {
+  let user = topic.toString().split('/')[1];
+  let water_sample = JSON.parse(message.toString());
+  console.log('mqtt message from ' + user + ', ' + message.toString());
+  
+  let alarm_par;
+  // connect to database with user and retrieve parameters
+  firebaseDB.ref('/alarmParameters/' + user).once('value', (snapshot) => {
+    if (snapshot.exists() && snapshot.hasChildren()) {
+    	alarm_par = snapshot.val();
+    }
+    else{
+    	// if user hasn't set any limits, no need to check state and send notifications
+    	return;
+    }  
+    // start checking conditions
+    let result = alarmManager.checkConditions(alarm_par, water_sample);
+    if (result.status != 'OK') {
+      // retrieve full row of flag states and compare it with flags var, ignore those that were already 'true'
+      localDB.getParameterStates(user, (err, row) => {
+        if (err || !row) {
+          return; // peace out
+        }
+        let keys = Object.keys(result.flags); // result.flags = { pH, orp, turbidity, temperature }
+        for (parameter_name of keys) {
+          if (result.flags[parameter_name] == 1 && row[parameter_name] == 0) {
+        	  // meaning if the state went from 0 to 1, send a notification (like pull up interruptions)
+        	  localDB.insertAlarm(user, result.alarms[parameter_name]); // register alarm in local database
+        	  alarmManager.sendNotification(firebaseDB, user, result.alarms[parameter_name]);
+          }
+        }
+      });
+    }  
+    localDB.setParameterStates(user, result.flags); // set the current state of the parameters
+  });
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log('server started on port ' + PORT);
+});</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Component for a customer support chatbox interface -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-custom">
+								<div class="panel-heading" role="tab" id="exampleEight">
+									<h4 class="panel-title">
+										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseExampleEight" aria-expanded="false" aria-controls="collapseOne">
+											Component for a customer support chatbox interface
+										</a>
+									</h4>
+								</div>
+								<div id="collapseExampleEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="exampleEight">
+									<div class="panel-body">
+<pre><code class="language-typescript">import { OnInit, Component } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
+import { trigger, style, animate, transition } from '@angular/animations';
+import { Message, BotResponse, Button } from "../../../core/interfaces/customer-chatbox";
+import $ from "jquery";
+import { environment } from 'src/environments/environment.prod';
+import { FormBuilder, FormControlStatus, FormGroup, Validators } from "@angular/forms";
+import { v4 as uuidv4 } from 'uuid';
+
+/**
+  * CustomerChatbotComponent Documentation (mainly the Message object and related functions):
+  * 
+  *  ********************************************************************************
+  *  *  Message Box:                                          *  Related functions: *
+  *  *--------------------------------------------------------*---------------------*
+  *  *  message.content: body of text                         *  formatString()     *
+  *  *--------------------------------------------------------*---------------------*
+  *  *  message.form: forms the bot requests to be filled     *  createNewForm()    *
+  *  *    --&gt; formGroup                                       *  validateData()     *
+  *  *    --&gt; formControls                                    *                     *
+  *  *      --&gt; select: refers to &lt;select&gt;, contains the data *                     *
+  *  *      --&gt; (others)?: any other control can be added     *                     *
+  *  *          through createNewForm() by setting a new case *                     *
+  *  *--------------------------------------------------------*---------------------*
+  *  *  message.images: images to be shown                    *                     *
+  *  *--------------------------------------------------------*---------------------*
+  *  *  message.buttons: buttons with choices                 *  selectOption()     *
+  *  ********************************************************************************
+  *  
+  *  Role of this component: convert what BotResponse returns to a component the user can interact with
+  *  
+  */
+@Component({
+  selector: "app-customer-chatbot",
+  templateUrl: "./customer-chatbot.component.html",
+  styleUrls: ["./customer-chatbot.component.scss"],
+  animations: [
+    trigger("chatbox-minimize", [
+      transition(":enter", [
+        style({ height: "0vh" }),
+        animate("0.2s ease-out", style({ height: "70vh" }))
+      ]),
+      transition(":leave", [
+        animate("0.2s ease-out", style({ height: "0vh" }))
+      ])
+    ])
+  ]
+})
+export class CustomerChatbotComponent implements OnInit {
+	
+  private botAPI = environment.botAPI;
+  private sessionId = "";
+
+  // chatbox behaviour properties
+  public showChatbox = false; // refers to the entire chatbox
+  public isMinimized = false; // when true, only the .title is seen
+  public isWaitingForMessage = false; // shows the "user is typing..." kind of animation while user is waiting for bot to answer
+
+  public messages: Message[] = [];
+  public messageInput: string = ""; // text message input
+  private currentlyActiveForm: FormGroup | undefined;
+
+  constructor(private http: HttpClient, private fb: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.sessionId = `${uuidv4()}_${new Date().toISOString()}`;
+  }
+
+  /**
+    * Open the chatbox and initialize chat with it's first messages
+    */
+  public chatInit(): void {
+    this.showChatbox = true;
+
+    // create automatic bot message from the client
+    let welcomeMessage: Message = {
+      from: "bot",
+      content: "Welcome!",
+      timeSent: this.getCurrentTime()
+    };
+    // instead of this.updateChat(), I add the message directly since I don't want to move the scrollbar when the chat is initializing
+    this.messages.push(welcomeMessage);
+    this.isWaitingForMessage = true; // start the loading animation
+
+    // get first response from the bot API
+    this.getBotResponse("hello")
+      .then((botResponse: Message) => {
+        this.isWaitingForMessage = false; // stop the loading animation
+        this.messages.push(botResponse);
+      })
+      .catch((errorMessage: Message) => {
+        this.isWaitingForMessage = false;
+        this.messages.push(errorMessage); // message.error should be defined here
+    });
+  }
+
+  /**
+    * clear values from chat and essentially reset it
+    */
+  public destroyChat(): void {
+    this.messages = [];
+    this.showChatbox = false;
+    this.isMinimized = false;
+    this.sessionId = `${uuidv4()}_${new Date().toISOString()}`; // update session id
+  }
+
+  /**
+    * When clicking the tray icon or the title, the chatbox will minimize
+    */
+  public toggleMinimize(): void {
+    this.isMinimized = !this.isMinimized;
+  }
+
+  /**
+    * When chatbox open animation starts, adjust chatbox's body scrollbar so it's stuck to the bottom
+    */
+  public afterChatboxIsOpen(): void {
+    if (!this.isMinimized) { // when chatbox is being opened keep scrollbar stuck to the bottom
+      let chatboxBody = document.getElementById("chatbox-body");
+      if (chatboxBody) {
+        chatboxBody.scrollTop = chatboxBody.scrollHeight;
+      }
+    }
+  }
+
+  /**
+    * Send message to bot API and get response
+    */
+  public sendMessage(): void {
+    let validationResult = this.validateData(); // should validate whenever there's a form present
+    if (validationResult.status === "INVALID") {
+      this.updateChat({from: "bot", content: validationResult.message, timeSent: this.getCurrentTime()});
+      return;
+    }
+
+    let content = this.messageInput;
+    this.messageInput = ""; // clear &lt;input /&gt;'s text
+    this.updateChat({from: "user", content, timeSent: this.getCurrentTime()});
+    this.isWaitingForMessage = true; // start the loading animation
+
+    // wait for the bot's response
+    setTimeout(() => { // add a small delay to show the user message before immediately getting the bot's response (happens in cases when the response comes too quick)
+      this.getBotResponse(content)
+        .then((botResponse: Message) => {
+          this.isWaitingForMessage = false; // stop the loading animation
+          this.updateChat(botResponse);
+        })
+        .catch((errorMessage: Message) => {
+          this.isWaitingForMessage = false;
+          this.updateChat(errorMessage); // message.error should be defined here
+        })
+    }, 700);
+  }
+
+  private getBotResponse(message: string): Promise&lt;Message&gt; {
+    let postBody = {
+      "phone": this.sessionId,
+      "message": message,
+      "lic": "xxxxxxxxxx@x.xx",
+      "application": "web"
+    };
+
+    return new Promise((resolve, reject) => {
+      this.http.post(this.botAPI, postBody).subscribe((data: BotResponse) => {
+        if (data.status === "OK") {
+          let incomingMessage = data.msg || "Sorry I couldn't recognize what you meant.";
+
+          let botMessage: Message = {
+            from: "bot",
+            content: this.formatString(incomingMessage),
+            timeSent: this.getCurrentTime()
+          };
+
+          if (data.form != undefined) { // if data contains a form, create the means to display and manage it from the component
+            botMessage.form = {
+              formControls: data.form.formControls,
+              formGroup: this.createNewForm(data.form.formControls)
+            };
+				  	
+            this.currentlyActiveForm = botMessage.form.formGroup; // set the currently active form to do validations on
+          }
+  
+          resolve(botMessage);
+        } else {  
+          reject({
+            from: "bot",
+            content: "Sorry, there was a connectivity error with our bot, please try again later.",
+            timeSent: this.getCurrentTime(),
+            error: true
+          } as Message);
+        }
+      }, (error) => {
+        // for debugging I recomend logging this error inside this block
+        reject({
+          from: "bot",
+          content: "Sorry there was an issue with our bot, we will try to fix it as soon as possible.",
+          timeSent: this.getCurrentTime(),
+          error: true
+        } as Message);
+      });
+    });
+  }
+
+  /**
+    * Similar to sendMessage() but in the context of a `&lt;button&gt;` instead of `&lt;input /&gt;`
+    * @param option representation of `&lt;button&gt;` with the value it holds
+    */
+  public selectOption(option: Button): void {
+    // update chat with user's choice
+    this.updateChat({from: "user", content: option.value, timeSent: this.getCurrentTime()});
+    this.isWaitingForMessage = true;
+
+    // wait for the bot's response
+    this.getBotResponse(option.exec)
+      .then((botResponse: Message) => {
+        this.isWaitingForMessage = false; // stop the loading animation
+        this.updateChat(botResponse);
+      })
+      .catch((errorMessage: Message) => {
+        this.isWaitingForMessage = false;
+        this.updateChat(errorMessage); // message.error should be defined here
+      });
+  }
+
+  private updateChat(message: Message): void {
+    this.messages.push(message);
+
+    // keep the scrollbar stuck to the bottom
+    let chatboxBody = $("#chatbox-body");
+    if (chatboxBody) {
+      setTimeout(() => {
+        chatboxBody.animate({scrollTop: chatboxBody.prop("scrollHeight")}, 500);
+      }, 100);
+    }
+  }
+
+  /**
+    * Create a form group given the passed form controls
+    * @param formControls object with set of data which holds what type of control it is for (defined by the object keys) and what data to fill it with
+    * @returns the form group corresponding to the bot's message 
+    */
+  private createNewForm(formControls: Message["form"]["formControls"]): FormGroup {
+    let controls = {};
+    for (let controlType in formControls) {
+      switch (controlType) {
+        case "select":
+          controls[controlType] = ['', Validators.required]; // a &lt;select&gt; control should have this behaviour
+          break;
+        // add more cases here in line with Message.form.formControls property names when the need arises
+      }
+    }
+    
+    return this.fb.group(controls);
+  }
+	
+  /**
+    * custom validation when bot's response contains data that must be validated
+    * @returns 
+    */
+  private validateData(): {status: string, message: string} {
+    let validationResult = { status: "VALID", message: "" };
+    if (!this.currentlyActiveForm) return validationResult; // if there's no form there's no need to validate
+
+    if (!this.currentlyActiveForm.invalid) {
+      this.currentlyActiveForm = undefined; // clear the currently active form since validation gave a green light
+      return validationResult;
+    }
+
+    // if invalid is true, check for validation
+    let status: FormControlStatus = this.currentlyActiveForm.status; // see FormControlStatus for values
+    validationResult.status = status;
+    validationResult.message = "Please select a valid option.";
+    return validationResult;
+  }
+
+  /*--------------------- Helper functions --------------------*/
+  /**
+    * get current hours and minutes
+    * @returns string time in the form of hh:mm
+    */
+  private getCurrentTime(): string {
+    const date = new Date();
+    return String(date.getHours()).padStart(2, "0") + ":" + String(date.getMinutes()).padStart(2, "0");
+  }
+
+  /**
+    * format the string into something html can read and interpret
+    * @param str 
+    * @returns formatted string with html
+    */
+  private formatString(str: string): string {
+    str = str.replace(/\^\/.*$/g, ""); // remove the string that the server sends as ^{'object': 'foo'} (usually at the end)
+    str = str.replace(/\n\n\n/g, "\n\n");
+    str = str.replace(/\n\n/g, "\n");
+
+    // detect bold text that comes in the form of *my text* and inject &lt;b&gt; tags
+    let boldStringRegex = /\*.*\*/gi;
+    let boldStringMatches = str.match(boldStringRegex);
+    if (boldStringMatches) {
+      for (let boldString of boldStringMatches) {
+        let rawString = boldString.slice(1, -1); // remove the first and last character. Ex: *my text* -> my text
+        str = str.replace(boldString, `&lt;b&gt;${rawString}&lt;/b&gt;`);
+      }
+    }
+
+    // detect links and add the &lt;a&gt; tag to them
+    let linkRegex = /(https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,})/gi;
+    let linkMatches = str.match(linkRegex);
+    if(linkMatches) {
+      for (let link of linkMatches) {
+        str = str.replace(link, `&lt;a target="_blank" href="${link}"&gt;${link}&lt;/a&gt;`);
+      }
+    }
+
+    // detect emails and add the &lt;a&gt; tag to them
+    let emailRegex = /([a-zA-Z0-9._+-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi;
+    let emailMatches = str.match(emailRegex);
+    if(emailMatches) {
+      for (let email of emailMatches) {
+        str = str.replace(email, `&lt;a href="mailto: ${email}"&gt;${email}&lt;/a&gt;`);
+      }
+    }
+
+    return str;
+  }
+  /*-----------------------------------------------------------*/
+}
+</code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end snippets -->
+
+		<!-- start portfolio -->
+		<section id="portfolio" class="custom-scrollbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="bounce">PROJECTS <small>(some of them)</small></h2>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4 col-xs-6 animate invisible project" data-animation="rotateInDownLeft" data-animation-delay="0.3s">
+							<div class="portfolio-thumb">
+								<img src="images/ML-app.png" class="img-responsive" alt="portfolio img">
+								<a href="https://github.com/AndresRCA/ai-authentication">
+									<div class="portfolio-overlay">
+										<h4>Machine Learning Authentication</h4>
+										<h5>Authors: Andres, David</h5>
+										<h5>Stack: Angular, Flask, PyTorch, Docker, others...</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-xs-6 animate invisible project" data-animation="rotateInDownLeft" data-animation-delay="0.6s">
+							<div class="portfolio-thumb">
+								<img src="images/admin-dashboard.png" class="img-responsive" alt="portfolio img">
+								<a href="https://github.com/AndresRCA/adminISP-dashboard">
+									<div class="portfolio-overlay">
+										<h4>Admin Dashboard</h4>
+										<h5>Author: Andres</h5>
+										<h5>Stack: Angular</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-xs-6 animate invisible project" data-animation="rotateInDownLeft" data-animation-delay="0.9s">
+							<div class="portfolio-thumb">
+								<img src="images/apiDocs1.png" class="img-responsive" alt="portfolio img">
+								<a href="https://github.com/AndresRCA/admin-NestJS-backend">
+									<div class="portfolio-overlay">
+										<h4>NestJS Backend</h4>
+										<h5>Author: Andres</h5>
+										<h5>Stack: NestJS, Jest, PostgreSQL</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 col-xs-6 animate invisible project" data-animation="rotateInDownLeft" data-animation-delay="1.2s">
+							<div class="portfolio-thumb">
+								<img src="images/water-app.jpg" class="img-responsive" alt="portfolio img">
+								<a href="https://github.com/AndresRCA/Water-Monitoring-App">
+									<div class="portfolio-overlay">
+										<h4>Water Monitoring App</h4>
+										<h5>Author: Andres</h5>
+										<h5>Stack: Android, Java, MQTT, Firebase</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6 col-xs-6 animate invisible project" data-animation="rotateInDownLeft" data-animation-delay="1.5s">
+							<div class="portfolio-thumb">
+								<img src="images/automatic-car.png" class="img-responsive" alt="portfolio img">
+								<a href="https://github.com/AndresRCA/Automatic-Car">
+									<div class="portfolio-overlay">
+										<h4>Automatic Car</h4>
+										<h5>Author: Andres</h5>
+										<h5>Stack: Assembly, C, MPLAB X IDE</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4 col-xs-6 animate invisible project" data-animation="rotateInDownLeft" data-animation-delay="1.8s">
+							<div class="portfolio-thumb">
+								<img src="images/prob1.png" class="img-responsive" alt="portfolio img">
+								<a href="https://codepen.io/AndresRCA/pen/WKreqg">
+									<div class="portfolio-overlay">
+										<h4>Combinatorial Probability Simulator</h4>
+										<h5>Author: Andres</h5>
+										<h5>Stack: Vue, Bulma.css</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-xs-6 animate invisible project" data-animation="rotateInDownLeft" data-animation-delay="2.1s">
+							<div class="portfolio-thumb">
+								<img src="images/vue-project-Cooking.png" class="img-responsive" alt="portfolio img">
+								<a href="https://github.com/AndresRCA/Vue-project">
+									<div class="portfolio-overlay">
+										<h4>Vue Project</h4>
+										<h5>Authors: Andres</h5>
+										<h5>Stack: Vue, Bulma.css, Laravel</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    <!-- end portfolio -->
+
+    <!-- start footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 fadeIn" data-animation-delay="0.9s">
+            <p>Copyright &copy; 2023 AndresRCA
+            <hr>
+            <ul class="social-icon">
+              <li><a href="https://github.com/AndresRCA" class="fa fa-github"></a></li>
+              <li><a href="https://www.linkedin.com/in/andres-castillo-439bb3124" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<!-- bootstrap v3.3.4 -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- docSlider -->
+	<script src="js/docSlider.min.js"></script>
+	<!-- text rotater -->
+	<script src="js/jquery.simple-text-rotator.js"></script>
+	<!-- custom -->
+	<script src="js/main.js"></script>
 </body>
+
 </html>
